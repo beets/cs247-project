@@ -1,0 +1,15 @@
+textarea {
+    width: 100%;
+}
+
+.comments {
+    margin: 30px auto;
+}
+
+.comment {
+    margin: 30px auto;
+}
+
+.row button img {
+    height: 20px;
+}
