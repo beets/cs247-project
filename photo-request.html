@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/main.css">
     <title>Family history</title>
+    <style>
+        .upload-photo .glyphicon { color: white; display: block; font-size: 2em; height: 320px; line-height: 320px; border: 3px solid #90acc7; background: #6a8db3; text-align: center; cursor: pointer; }
+        #step-1, #step-2, #step-3 { display: none; }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -33,9 +37,16 @@
         <h2>Add a story</h2>
         <h3><span class="label label-primary">Starting out</span></h3>
         <div class="main-photo">
-            <img src="http://media.salon.com/2012/04/romney_family-460x307.jpg" />
+            <div id="step-0" class="row">
+                <div class="col-xs-12 upload-photo">
+                    <span class="glyphicon glyphicon-camera"></span>
+                </div>
+            </div>
+            <div id="step-1" class="row">
+                <img class="col-xs-12" src="http://media.salon.com/2012/04/romney_family-460x307.jpg" />
+            </div>
         </div>
-        <div class="comments">
+        <div id="step-2" class="comments">
             <div class="row comment">
                 <img class="col-xs-2" src="images/user-0.jpg" />
                 <div class="col-xs-10">
@@ -43,7 +54,7 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div id="step-3" class="row">
             <div class="col-xs-10"></div>
             <div class="col-xs-2">
                 <button type="button" class="btn btn-primary" id="send">Send</button>
@@ -55,7 +66,13 @@
     <script>
         $(function() {
             $('#send').click(function() {
-                window.location.href = 'photo-reply.html';
+                window.location.href = 'timeline.html';
+            });
+            $('#step-0').click(function() {
+                $(this).hide();
+                $('#step-1').show();
+                $('#step-2').show();
+                $('#step-3').show();
             });
         });
     </script>

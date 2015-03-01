@@ -11,6 +11,8 @@
     <style>
         .tl-expanded { display: none; }
         .story { border-bottom: 1px solid #ccc; padding-bottom: 15px; margin-bottom: 15px; }
+        .add-story { color: white; font-size: 2em; height: 65px; line-height: 55px; border: 3px solid #90acc7; background: #6a8db3; text-align: center; cursor: pointer; }
+        .col-xs-4 img { height: 65px; }
     </style>
     <title>Family history</title>
 </head>
@@ -40,6 +42,20 @@
         <h1 class="col-xs-9">Grandma's lifetime of experiences</h1>
     </div>
     <ul class="timeline">
+      <li>
+        <div class="tl-circ"></div>
+        <div class="timeline-panel">
+          <div class="tl-heading">
+            <h4>Add a new album</h4>
+          </div>
+          <div class="tl-body">
+            <div class="images row">
+                <div class="col-xs-4"><div class="add-story">+</div></div>
+            </div>
+          </div>
+        </div>
+      </li>
+
       <li class="timeline-inverted">
         <div class="tl-circ"></div>
         <div class="timeline-panel">
@@ -50,7 +66,7 @@
             <div class="images row">
                 <img class="col-xs-4" src="images/photo-request-0.jpg" />
                 <img class="col-xs-4" src="images/photo-request-0.jpg" />
-                <img class="col-xs-4" src="images/photo-request-0.jpg" />
+                <div class="col-xs-4"><div class="add-story">+</div></div>
             </div>
           </div>
           <div class="tl-expanded">
@@ -124,13 +140,13 @@
             <div class="images row">
                 <img class="col-xs-4" src="images/photo-request-0.jpg" />
                 <img class="col-xs-4" src="images/photo-request-0.jpg" />
-                <img class="col-xs-4" src="images/photo-request-0.jpg" />
+                <div class="col-xs-4"><div class="add-story">+</div></div>
             </div>
           </div>
         </div>
       </li>
 
-      <li>
+      <li class="timeline-inverted">
         <div class="tl-circ"></div>
         <div class="timeline-panel">
           <div class="tl-heading">
@@ -139,8 +155,7 @@
           <div class="tl-body">
             <div class="images row">
                 <img class="col-xs-4" src="images/photo-request-0.jpg" />
-                <img class="col-xs-4" src="images/photo-request-0.jpg" />
-                <img class="col-xs-4" src="images/photo-request-0.jpg" />
+                <div class="col-xs-4"><div class="add-story">+</div></div>
             </div>
           </div>
         </div>
@@ -156,7 +171,7 @@
             <div class="images row">
                 <img class="col-xs-4" src="images/photo-request-0.jpg" />
                 <img class="col-xs-4" src="images/photo-request-0.jpg" />
-                <img class="col-xs-4" src="images/photo-request-0.jpg" />
+                <div class="col-xs-4"><div class="add-story">+</div></div>
             </div>
           </div>
         </div>
@@ -171,6 +186,9 @@
             $('.timeline-panel').click(function() {
                 $(this).children('.tl-body').toggle();
                 $(this).children('.tl-expanded').toggle();
+            });
+            $('.add-story').click(function() {
+                window.location = 'photo-request.html';
             });
         });
     </script>
