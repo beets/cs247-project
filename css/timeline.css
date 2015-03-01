@@ -140,6 +140,10 @@
   color: #c25b4e;
 }
 
+.tl-heading {
+    margin-bottom: 5px;
+}
+
 .tl-body p, .tl-body ul {
   margin-bottom: 0;
 }
