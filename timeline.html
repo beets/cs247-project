@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/timeline.css">
+    <style>
+        .tl-expanded { display: none; }
+        .story { border-bottom: 1px solid #ccc; padding-bottom: 15px; margin-bottom: 15px; }
+    </style>
     <title>Family history</title>
 </head>
 <body>
@@ -28,6 +32,64 @@
                 <img class="col-xs-4" src="images/photo-request-0.jpg" />
                 <img class="col-xs-4" src="images/photo-request-0.jpg" />
                 <img class="col-xs-4" src="images/photo-request-0.jpg" />
+            </div>
+          </div>
+          <div class="tl-expanded">
+            <div class="story">
+                <div class="row">
+                    <img class="col-xs-12" src="images/photo-request-0.jpg" />
+                </div>
+                <div class="media">
+                  <div class="media-left top-middle">
+                    <img src="images/user-0.jpg" height="32" />
+                  </div>
+                  <div class="media-body">
+                    <p>Hi Mom! I found this picture of you. The kids would love to hear morea bout it.</p>
+                  </div>
+                </div>
+                <div class="media">
+                  <div class="media-left top-middle">
+                    <img src="images/user-1.jpg" height="32" />
+                  </div>
+                  <div class="media-body">
+                    <p>Wow, I can't believe you found this one!</p>
+                  </div>
+                </div>
+                <div class="media">
+                  <div class="media-left top-middle">
+                    <img src="images/user-1.jpg" height="32" />
+                  </div>
+                  <div class="media-body">
+                      <audio controls="controls">
+                          <source src="../audio/birds.mp3" type="audio/mpeg">
+                          Your browser does not support the HTML5 audio element.
+                      </audio>
+                  </div>
+              </div>
+            </div>
+            <div class="story">
+                <div class="row">
+                    <img class="col-xs-12" src="images/photo-request-0.jpg" />
+                </div>
+                <div class="media">
+                  <div class="media-left top-middle">
+                    <img src="images/user-0.jpg" height="32" />
+                  </div>
+                  <div class="media-body">
+                    <p>Hi Mom! I found this picture of you. The kids would love to hear morea bout it.</p>
+                  </div>
+                </div>
+                <div class="media">
+                  <div class="media-left top-middle">
+                    <img src="images/user-1.jpg" height="32" />
+                  </div>
+                  <div class="media-body">
+                      <audio controls="controls">
+                          <source src="../audio/birds.mp3" type="audio/mpeg">
+                          Your browser does not support the HTML5 audio element.
+                      </audio>
+                  </div>
+              </div>
             </div>
           </div>
         </div>
@@ -83,6 +145,15 @@
      
     </ul>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script>
+        $(function() {
+            $('.timeline-panel').click(function() {
+                $(this).children('.tl-body').toggle();
+                $(this).children('.tl-expanded').toggle();
+            });
+        });
+    </script>
 </body>
 </html>
