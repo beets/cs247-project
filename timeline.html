@@ -4,20 +4,45 @@
         <h1 class="col-xs-9">Grandma's lifetime of experiences</h1>
     </div>
     <ul class="timeline">
-      <li>
-        <div class="tl-circ"></div>
-        <div class="timeline-panel">
-          <div class="tl-heading">
-            <h4>Add a new album</h4>
-          </div>
-          <div class="tl-body">
-            <div class="images row">
-                <div class="col-xs-4"><div class="add-story">+</div></div>
-            </div>
-          </div>
-        </div>
-      </li>
+        {{> timeline_new}}
+        {{#each story}}
+            {{> timeline_story}}
+        {{/each}}
+    </ul>
+</template>
 
+<template name="timeline_story">
+    <li class="timeline-inverted">
+      <div class="tl-circ"></div>
+      <div class="timeline-panel">
+      </div>
+      <div class="tl-body">
+        <div class="images row">
+            <img class="col-xs-4" src="images/photo-request-0.jpg" />
+            <img class="col-xs-4" src="images/photo-request-0.jpg" />
+            <div class="col-xs-4"><div class="add-story">+</div></div>
+        </div>
+      </div>
+    </li>
+</template>
+
+<template name="timeline_new">
+  <li class="timeline-inverted timeline_new">
+    <div class="tl-circ"></div>
+    <div class="timeline-panel">
+      <div class="tl-heading">
+        <h4>Start a new story</h4>
+      </div>
+      <div class="tl-body">
+        <div class="images row">
+            <div class="col-xs-4"><div class="add_story">+</div></div>
+        </div>
+      </div>
+    </div>
+  </li>
+</template>
+
+<!--
       <li class="timeline-inverted">
         <div class="tl-circ"></div>
         <div class="timeline-panel">
@@ -141,3 +166,4 @@
      
     </ul>
 </template>
+-->
