@@ -34,7 +34,9 @@ Router.route('/story/add', function() {
                     // story date
                     createdAt: new Date()
                 });
+
                 Router.go('/timeline');
+                return false;
             }
         });
 
