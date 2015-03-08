@@ -1,42 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/timeline.css">
-    <style>
-        .tl-expanded { display: none; }
-        .story { border-bottom: 1px solid #ccc; padding-bottom: 15px; margin-bottom: 15px; }
-        .add-story { color: white; font-size: 2em; height: 65px; line-height: 55px; border: 3px solid #90acc7; background: #6a8db3; text-align: center; cursor: pointer; }
-        .col-xs-4 img { height: 65px; }
-    </style>
-    <title>Family history</title>
-</head>
-<body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Family memories</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="photo-request.html">Add a story</a></li>
-            <li class="active"><a href="timeline.html">See timeline</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
-    <div id="request" class="container-fluid">
+<template name="timeline">
     <div class="row header">
         <img class="col-xs-3" src="images/user-1.jpg" />
         <h1 class="col-xs-9">Grandma's lifetime of experiences</h1>
@@ -178,19 +140,4 @@
       </li>
      
     </ul>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-    <script>
-        $(function() {
-            $('.timeline-panel').click(function() {
-                $(this).children('.tl-body').toggle();
-                $(this).children('.tl-expanded').toggle();
-            });
-            $('.add-story').click(function() {
-                window.location = 'photo-request.html';
-            });
-        });
-    </script>
-</body>
-</html>
+</template>
