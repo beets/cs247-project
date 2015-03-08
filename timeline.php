@@ -1,0 +1,61 @@
+<?
+$family = $_GET['family'];
+$family_file = file_get_contents('./data/' . $family . '.json');
+$family_json = json_decode($family_file, true);
+//echo var_dump($family_json);
+$parent = $family_json['parent'];
+$stories = $family_json['stories'];
+
+$get = 'family=' . $_GET['family'];
+
+function new_story() {
+  global $get;
+  ?>
+  <li class="timeline-inverted timeline_new">
+    <div class="tl-circ"></div>
+    <div class="timeline-panel">
+      <div class="tl-heading">
+        <h4>Start a new story</h4>
+      </div>
+      <div class="tl-body">
+        <div class="images row">
+            <div class="col-xs-4"><a class="add_story" href="add_story.php?<? echo $get ?>">+</a></div>
+        </div>
+      </div>
+    </div>
+  </li>
+<? }
+
+function existing_story($story) { ?>
+  <li class="timeline-inverted">
+    <div class="tl-circ"></div>
+    <div class="timeline-panel">
+        <div class="tl-heading">
+          <h4><? echo $story['date'] ?></h4>
+        </div>
+        <div class="tl-body">
+          <div class="images row">
+              <p>Placeholder for image</p>
+          </div>
+        </div>
+    </div>
+  </li>
+<? }
+
+?>
+
+<? include 'templates/header.html' ?>
+<? include 'templates/nav.html' ?>
+<div id="request" class="container-fluid">
+    <div class="row header">
+        <img class="col-xs-3" src="images/user-1.jpg" />
+        <h1 class="col-xs-9"><? echo $parent ?>'s lifetime of experiences</h1>
+    </div>
+    <ul class="timeline">
+        <? new_story() ?>
+        <? foreach ($stories as $story) { ?>
+        <? existing_story($story); ?>
+        <? } ?>
+    </ul>
+</div>
+<? include 'templates/footer.html' ?>

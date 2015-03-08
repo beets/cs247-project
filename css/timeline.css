@@ -1,4 +1,5 @@
 .timeline_new .add_story {
+  display: block;
   color: white;
   font-size: 2em;
   height: 65px;
@@ -6,6 +7,7 @@
   border: 3px solid #90acc7;
   background: #6a8db3;
   text-align: center;
+  text-decoration: none;
   cursor: pointer;
 }
 

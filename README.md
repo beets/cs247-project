@@ -1,5 +1,5 @@
 # cs247-project
-https://www.meteor.com/install
-meteor add natestrauser:filepicker-plus
-meteor add iron:router
-meteor add mdg:camera
+
+## Set up PHP
+Yosemite:
+http://coolestguidesontheplanet.com/get-apache-mysql-php-phpmyadmin-working-osx-10-10-yosemite/
