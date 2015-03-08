@@ -26,19 +26,23 @@ function new_story() {
   </li>
 <? }
 
-function existing_story($story) { ?>
-  <li class="timeline-inverted">
-    <div class="tl-circ"></div>
-    <div class="timeline-panel">
-        <div class="tl-heading">
-          <h4><? echo $story['date'] ?></h4>
+function existing_story($id, $story) {
+  global $get;
+  ?>
+  <li class="timeline-inverted existing-story">
+    <a href="story.php?<? echo $get ?>&id=<? echo $id ?>">
+        <div class="tl-circ"></div>
+        <div class="timeline-panel">
+            <div class="tl-heading">
+              <h4><? echo $story['date'] ?></h4>
+            </div>
+            <div class="tl-body">
+              <div class="images row">
+                  <p>Placeholder for image</p>
+              </div>
+            </div>
         </div>
-        <div class="tl-body">
-          <div class="images row">
-              <p>Placeholder for image</p>
-          </div>
-        </div>
-    </div>
+    </a>
   </li>
 <? }
 
@@ -53,8 +57,8 @@ function existing_story($story) { ?>
     </div>
     <ul class="timeline">
         <? new_story() ?>
-        <? foreach ($stories as $story) { ?>
-        <? existing_story($story); ?>
+        <? for ($i = 0; $i < count($stories); ++$i) { ?>
+        <? existing_story($i, $stories[$i]); ?>
         <? } ?>
     </ul>
 </div>
