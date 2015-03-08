@@ -7,6 +7,12 @@ Router.route('/timeline', function() {
             Router.go('/story/add');
         },
     });
+
+    Template.timeline.helpers({
+        story: function() {
+            return Stories.find({});
+        }
+    });
 });
 
 Router.route('/story/add', function() {
@@ -18,7 +24,16 @@ Router.route('/story/add', function() {
             "click .upload-photo": function() {
                 console.log('hello');
             },
-            "click #send": function() {
+
+            "click #send": function(event) {
+                var parentDiv = $(event.target).parents('.main-photo');
+                var title = parentDiv.children('input[name=title]').get(0).value;
+                console.log(title);
+                Stories.insert({
+                    title: title,
+                    // story date
+                    createdAt: new Date()
+                });
                 Router.go('/timeline');
             }
         });
@@ -32,3 +47,5 @@ Router.route('/story/add', function() {
 */
     }
 });
+
+Stories = new Mongo.Collection("stories");

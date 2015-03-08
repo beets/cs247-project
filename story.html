@@ -6,6 +6,8 @@
                 <span class="glyphicon glyphicon-camera"></span>
             </div>
         </div>
+        <input name="title" type="text" placeholder="Story title" />
+        <!-- date of photo -->
         {{#each comments}}
             {{> comment}}
         {{/each}}
@@ -13,7 +15,7 @@
         <div id="step-3" class="row">
             <div class="col-xs-10"></div>
             <div class="col-xs-2">
-                <a type="button" class="btn btn-primary" id="send">Send</a>
+                <button type="button" class="btn btn-primary" id="send">Send</button>
             </div>
         </div>
     </div>
@@ -25,7 +27,7 @@
 
 <template name="comment">
     <div class="row comment">
-        <img class="col-xs-2" src="images/user-0.jpg" />
+        <img class="col-xs-2" src="/images/user-0.jpg" />
         <div class="col-xs-10">
             {{#if text}}
                 {{> text}}
