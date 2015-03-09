@@ -3,15 +3,15 @@
     "stories": [
         {
             "date": 2000,
-            "prompt": "What's going on in this pic?",
-            "responseText": "Once upon a time......",
+            "prompt": "Hi Mom! I found this picture of you. The kids would love to hear morea bout it. Where were we when we took that photo?",
+            "responseText": "Back in the day.....",
             "audioPath": null,
             "imagePath": null
         },
         {
             "date": 1997,
-            "prompt": "What's going on in this pic?",
-            "responseText": "Once upon a time......",
+            "prompt": "Hi Mom! I found this picture of you. The kids would love to hear morea bout it. Where were we when we took that photo?",
+            "responseText": "NEW STORY",
             "audioPath": null,
             "imagePath": null
         }

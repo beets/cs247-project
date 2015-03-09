@@ -24,9 +24,6 @@ function new_comment($commentText) { ?>
 <? include 'templates/nav.html' ?>
 <div id="request" class="container-fluid">
     <h2>Story from <? echo $story['date'] ?></h2>
-    <h4> <? echo $story["prompt"] ?> </hr>
-    <br>
-    <br>
     <div class="main-photo">
         <div id="step-0" class="row">
             <div class="col-xs-12 upload-photo">
@@ -35,6 +32,7 @@ function new_comment($commentText) { ?>
         </div>
         <form action="save_response.php?<? echo $get ?>" method="post">
         <input name="date" type="text" placeholder="When was this photo taken?" />
+        <? echo $story["prompt"] ?>
         <? new_comment("Type the story here")?>
         <div id="step-3" class="row">
             <div class="col-xs-10"></div>
