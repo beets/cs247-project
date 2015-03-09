@@ -1,12 +1,12 @@
 {
-    "parent": "Grandma",
+    "parent": "Grandpa",
     "stories": [
         {
             "date": 1997,
             "prompt": "Hi Mom! I found this picture of you. The kids would love to hear morea bout it. Where were we when we took that photo?",
             "responseText": "It was the summer of '69. I was young and hot...",
             "audioPath": null,
-            "imagePath": null
+            "imagePath": "./data/test/story.jpg"
         }
     ]
 }

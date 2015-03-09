@@ -45,7 +45,13 @@ function new_comment($family) { ?>
                 <img class="img img-responsive col-xs-12" />
             </div>
         </div>
-        <form id="save_story" action="save_story.php?<? echo $get ?>" method="post"> <input name="date" type="text" placeholder="When was this photo taken?" />
+    </div>
+    <div>
+      <form id="save_story" action="save_story.php?<? echo $get ?>" method="post">
+        <div class="row">
+            <h5 class="col-xs-2">Date</h5>
+            <input name="date" class="col-xs-10" type="text" placeholder="When was this photo taken?" />
+        </div>
         <input name="photo_url" type="hidden" />
         <? new_comment($family) ?>
         <div id="step-3" class="row">
@@ -54,7 +60,7 @@ function new_comment($family) { ?>
                 <button type="submit" class="btn btn-primary" id="send">Send</button>
             </div>
         </div>
-        </form>
+      </form>
     </div>
 </div>
 <? include 'templates/footer.html' ?>

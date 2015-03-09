@@ -41,12 +41,12 @@ function existing_story($id, $story) {
                   <? if ($story['imagePath']) { ?>
                   <img src="<? echo $story['imagePath'] ?>" class="img img-responsive"/>
                   <? } ?>
-                  <? if ($story['prompt']) { ?>
+                  <? /*if ($story['prompt']) { ?>
                     <p><? echo $story['prompt'] ?></p>
                   <? } ?>
                   <? if ($story['responseText']) { ?>
                     <p><? echo $story['responseText'] ?></p>
-                  <? } ?>
+                  <? }*/ ?>
               </div>
             </div>
         </div>
@@ -60,7 +60,7 @@ function existing_story($id, $story) {
 <? include 'templates/nav.html' ?>
 <div id="request" class="container-fluid">
     <div class="row header">
-        <img class="col-xs-3" src="images/user-1.jpg" />
+        <img class="col-xs-3" src="./data/<? echo $family ?>/parent.jpg" />
         <h1 class="col-xs-9"><? echo $parent ?>'s lifetime of experiences</h1>
     </div>
     <ul class="timeline">
