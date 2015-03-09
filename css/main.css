@@ -12,7 +12,7 @@ textarea {
 }
 
 .comment {
-    margin: 30px auto;
+    margin: 10px auto;
 }
 
 .row button img {
@@ -28,4 +28,8 @@ textarea {
     background: #6a8db3;
     text-align: center;
     cursor: pointer;
+}
+
+.instructions {
+    margin-top: 1em;
 }

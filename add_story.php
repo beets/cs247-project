@@ -8,27 +8,17 @@ $stories = $family_json['stories'];
 
 $get = 'family=' . $_GET['family'];
 
-// templates
-function new_comment($family) { ?>
-  <div class="row comment">
-      <img class="col-xs-2" src="./data/<? echo $family ?>/user.jpg" />
-      <div class="col-xs-10">
-          <textarea name="prompt" style="height: 6em">Hi Mom! I found this picture of you. The kids would love to hear morea bout it. Where were we when we took that photo?</textarea>
-      </div>
-  </div>
-<? }
-
 ?>
 
 <? include 'templates/header.html' ?>
 <? include 'templates/nav.html' ?>
 <div id="request" class="container-fluid">
     <h2>Add a story</h2>
-    <div class="main-photo">
+    <div id=step-1 class="main-photo">
         <div class="upload-photo">
-            <div class="row">
+            <div class="row" id="instructions">
                 <div class="col-xs-12">
-                    <h5>Upload an photo</h5>
+                    <h5>Step 1: Upload an photo</h5>
                 </div>
             </div>
             <div id="photo-form" class="row">
@@ -46,26 +36,52 @@ function new_comment($family) { ?>
             </div>
         </div>
     </div>
-    <div>
-      <form id="save_story" action="save_story.php?<? echo $get ?>" method="post">
-        <div class="row">
-            <h5 class="col-xs-2">Date</h5>
-            <input name="date" class="col-xs-10" type="text" placeholder="When was this photo taken?" />
+    <form id="save_story" action="save_story.php?<? echo $get ?>" method="post" onkeypress="return event.keyCode != 13;">
+    <div id=step-2 style="display:none">
+        <div class="row instructions">
+            <div class="col-xs-12">
+                <h5>Step 2: When was this photo taken?</h5>
+            </div>
         </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <input name="date" type="text" placeholder="1989" />
+            </div>
+        </div>
+    </div>
+    <div id=step-3 style="display:none">
         <input name="photo_url" type="hidden" />
-        <? new_comment($family) ?>
-        <div id="step-3" class="row">
+        <div class="row instructions">
+            <div class="col-xs-12">
+                <h5>Step 3: Write a message for your parent</h5>
+            </div>
+        </div>
+        <div class="row comment">
+            <img class="col-xs-2" src="./data/<? echo $family ?>/user.jpg" />
+            <div class="col-xs-10">
+                <textarea name="prompt" style="height: 6em">Hi Dad! I found this picture of you. The kids would love to hear more about it. Where were we when we took that photo?</textarea>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-xs-10"></div>
             <div class="col-xs-2">
                 <button type="submit" class="btn btn-primary" id="send">Send</button>
             </div>
         </div>
-      </form>
     </div>
+    </form>
 </div>
 <? include 'templates/footer.html' ?>
 <script>
 $(function() {
+    function step3() {
+        $('#step-2 .instructions h5').text('Story date');
+        $('#step-3').show();
+        $('#step-3 textarea').focus();
+    };
+    $('#step-2 input').focusout(function() {
+        step3();
+    });
     $('form#photo-upload').submit(function(event) {
         event.stopPropagation(); // Stop stuff happening
         event.preventDefault(); // Totally stop stuff happening
@@ -83,7 +99,9 @@ $(function() {
                 if (data.url) {
                     // Success
                     $('#photo-form').hide();
-                    $('#photo-uploaded img').attr('src', data.url);;
+                    $('#instructions').hide();
+                    $('#step-2').show();
+                    $('#photo-uploaded img').attr('src', data.url);
                     $('#photo-uploaded').show();
                     $('form#save_story input[name=photo_url]').val(data.url);
                 } else {
