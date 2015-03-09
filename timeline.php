@@ -65,7 +65,7 @@ function existing_story($id, $story) {
     </div>
     <ul class="timeline">
         <? new_story() ?>
-        <? for ($i = 0; $i < count($stories); ++$i) { ?>
+        <? for ($i = count($stories) - 1; $i >= 0; --$i) { ?>
         <? existing_story($i, $stories[$i]); ?>
         <? } ?>
     </ul>
