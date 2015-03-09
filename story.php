@@ -34,7 +34,13 @@ function new_comment($commentText, $family) { ?>
         </div>
         <form action="save_response.php?<? echo $get ?>" method="post">
         <input name="date" type="hidden" placeholder="When was this photo taken?" />
-        <? echo $story["prompt"] ?>
+        <div class="row">&nbsp;</div>
+        <div class="row comment">
+            <img class="col-xs-2" src="./data/<? echo $family ?>/user.jpg" />
+            <div class="col-xs-10">
+                <p><? echo $story["prompt"] ?></p>
+            </div>
+        </div>
         <? new_comment("Type the story here", $family)?>
         <div id="step-3" class="row">
             <div class="col-xs-10"></div>
