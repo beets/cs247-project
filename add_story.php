@@ -9,9 +9,9 @@ $stories = $family_json['stories'];
 $get = 'family=' . $_GET['family'];
 
 // templates
-function new_comment() { ?>
+function new_comment($family) { ?>
   <div class="row comment">
-      <img class="col-xs-2" src="/images/user-0.jpg" />
+      <img class="col-xs-2" src="./data/<? echo $family ?>/user.jpg" />
       <div class="col-xs-10">
           <textarea style="height: 6em">Hi Mom! I found this picture of you. The kids would love to hear morea bout it. Where were we when we took that photo?</textarea>
       </div>
@@ -31,7 +31,7 @@ function new_comment() { ?>
             </div>
         </div>
         <input name="date" type="text" placeholder="When was this photo taken?" />
-        <? new_comment() ?>
+        <? new_comment($family) ?>
         <div id="step-3" class="row">
             <div class="col-xs-10"></div>
             <div class="col-xs-2">

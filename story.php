@@ -9,9 +9,9 @@ $story = $family_json['stories'][$id];
 $get = 'family=' . $_GET['family'] . '&id=' . $_GET['id'];
 
 // templates
-function new_comment($commentText) { ?>
+function new_comment($commentText, $family) { ?>
   <div class="row comment">
-      <img class="col-xs-2" src="/images/user-0.jpg" />
+      <img class="col-xs-2" src="./data/<? echo $family ?>/parent.jpg" />
       <div class="col-xs-10">
           <textarea name="responseText" style="height: 6em"><? echo $commentText ?></textarea>
       </div>
@@ -33,7 +33,7 @@ function new_comment($commentText) { ?>
         <form action="save_response.php?<? echo $get ?>" method="post">
         <input name="date" type="text" placeholder="When was this photo taken?" />
         <? echo $story["prompt"] ?>
-        <? new_comment("Type the story here")?>
+        <? new_comment("Type the story here", $family)?>
         <div id="step-3" class="row">
             <div class="col-xs-10"></div>
             <div class="col-xs-2">
