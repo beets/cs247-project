@@ -38,7 +38,15 @@ function existing_story($id, $story) {
             </div>
             <div class="tl-body">
               <div class="images row">
-                  <p>Placeholder for image</p>
+                  <? if ($story['imagePath']) { ?>
+                  <img src="<? echo $story['imagePath'] ?>" class="img img-responsive"/>
+                  <? } ?>
+                  <? if ($story['prompt']) { ?>
+                    <p><? echo $story['prompt'] ?></p>
+                  <? } ?>
+                  <? if ($story['responseText']) { ?>
+                    <p><? echo $story['responseText'] ?></p>
+                  <? } ?>
               </div>
             </div>
         </div>

@@ -27,7 +27,9 @@ function new_comment($commentText, $family) { ?>
     <div class="main-photo">
         <div id="step-0" class="row">
             <div class="col-xs-12 upload-photo">
-                <span class="glyphicon glyphicon-camera"></span>
+              <? if ($story['imagePath']) { ?>
+              <img src="<? echo $story['imagePath'] ?>" class="img img-responsive"/>
+              <? } ?>
             </div>
         </div>
         <form action="save_response.php?<? echo $get ?>" method="post">
