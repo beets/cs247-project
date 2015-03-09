@@ -1,10 +1,19 @@
 {
     "parent": "Grandma",
     "stories": [
-    {
-        "date": 2000
-    },
-    {
-        "date": 1997
-    }]
+        {
+            "date": 2000,
+            "prompt": "What's going on in this pic?",
+            "responseText": "Once upon a time......",
+            "audioPath": null,
+            "imagePath": null
+        },
+        {
+            "date": 1997,
+            "prompt": "What's going on in this pic?",
+            "responseText": "Once upon a time......",
+            "audioPath": null,
+            "imagePath": null
+        }
+    ]
 }
