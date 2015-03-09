@@ -11,7 +11,7 @@ $newStory = array(
   "audioPath" => null,
   "imagePath" => $_POST['photo_url']
 );
-array_push($family_json['stories'], $newStory);
+array_unshift($family_json['stories'], $newStory);
 $output = json_encode($family_json, JSON_PRETTY_PRINT);
 file_put_contents('data/' . $family . '.json', $output);
 
