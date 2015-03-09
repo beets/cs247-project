@@ -13,7 +13,7 @@ function new_comment() { ?>
   <div class="row comment">
       <img class="col-xs-2" src="/images/user-0.jpg" />
       <div class="col-xs-10">
-          <textarea style="height: 6em">Hi Mom! I found this picture of you. The kids would love to hear morea bout it. Where were we when we took that photo?</textarea>
+          <textarea name="prompt" style="height: 6em">Hi Mom! I found this picture of you. The kids would love to hear morea bout it. Where were we when we took that photo?</textarea>
       </div>
   </div>
 <? }
@@ -45,14 +45,13 @@ function new_comment() { ?>
                 <img class="img img-responsive col-xs-12" />
             </div>
         </div>
-        <form id="save_story" action="save_story.php" method="post">
-        <input name="date" type="text" placeholder="When was this photo taken?" />
+        <form id="save_story" action="save_story.php?<? echo $get ?>" method="post"> <input name="date" type="text" placeholder="When was this photo taken?" />
         <input name="photo_url" type="hidden" />
         <? new_comment() ?>
         <div id="step-3" class="row">
             <div class="col-xs-10"></div>
             <div class="col-xs-2">
-                <button type="button" class="btn btn-primary" id="send">Send</button>
+                <button type="submit" class="btn btn-primary" id="send">Send</button>
             </div>
         </div>
         </form>
@@ -61,7 +60,6 @@ function new_comment() { ?>
 <? include 'templates/footer.html' ?>
 <script>
 $(function() {
-
     $('form#photo-upload').submit(function(event) {
         event.stopPropagation(); // Stop stuff happening
         event.preventDefault(); // Totally stop stuff happening

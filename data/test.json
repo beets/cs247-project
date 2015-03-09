@@ -1,19 +1,5 @@
 {
     "parent": "Grandma",
     "stories": [
-        {
-            "date": 2000,
-            "prompt": "Hi Mom! I found this picture of you. The kids would love to hear morea bout it. Where were we when we took that photo?",
-            "responseText": "Back in the day.....",
-            "audioPath": null,
-            "imagePath": null
-        },
-        {
-            "date": 1997,
-            "prompt": "Hi Mom! I found this picture of you. The kids would love to hear morea bout it. Where were we when we took that photo?",
-            "responseText": "NEW STORY",
-            "audioPath": null,
-            "imagePath": null
-        }
     ]
 }
