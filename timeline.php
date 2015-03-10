@@ -42,7 +42,7 @@ function existing_story($id, $story) {
                   <img src="<?= $story['imagePath'] ?>" class="img img-responsive"/>
                   <? } ?>
               </div>
-              <h4><?= $story['title'] ?></h4>
+              <h4 class="title"><?= $story['title'] ?></h4>
             </div>
         </div>
     </a>
@@ -53,10 +53,10 @@ function existing_story($id, $story) {
 
 <? include 'templates/header.html' ?>
 <? include 'templates/nav.html' ?>
-<div id="request" class="container-fluid">
+<div id="main-timeline" class="container-fluid">
+    <h1><?= $parent ?>'s lifetime of experiences</h1>
     <div class="row header">
-        <img class="col-xs-3" src="./data/<?= $family ?>/parent.jpg" />
-        <h1 class="col-xs-9"><?= $parent ?>'s lifetime of experiences</h1>
+        <img class="grandpa-main" src="./data/<?= $family ?>/parent.jpg" />
     </div>
     <div class="timeline-container">
         <ul class="timeline">

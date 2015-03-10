@@ -1,3 +1,9 @@
+/*
+#main-timeline .tl-body img {
+    height: 180px;
+}
+*/
+
 .timeline_new .add_story {
   display: block;
   color: white;
@@ -44,7 +50,7 @@
 /** timeline box structure **/
 .timeline {
   list-style: none;
-  padding: 0px 0 20px;
+  padding: 40px 0 0;
   position: relative;
 }
 
@@ -54,7 +60,7 @@
   position: absolute;
   content: " ";
   width: 3px;
-  background-color: #eee;
+  background-color: #aaa;
   left: 50%;
   margin-left: -1.5px;
 }
