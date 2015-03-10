@@ -39,7 +39,7 @@ function existing_story($id, $story) {
             <div class="tl-body">
               <div class="images row">
                   <? if ($story['imagePath']) { ?>
-                  <img src="<?= $story['imagePath'] ?>" class="img img-responsive"/>
+                  <img src="<?= $story['imagePath'] ?>" class="img img-responsive center"/>
                   <? } ?>
               </div>
               <h4 class="title"><?= $story['title'] ?></h4>

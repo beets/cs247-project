@@ -93,7 +93,7 @@ $(function() {
                 if (data.url) {
                     // Success
                     $('#photo-form .upload-photo').empty().css('background-image', 'url(' + data.url + ')');
-                    $('#instructions').hide();
+                    $('#instructions').css('visibility', 'hidden');
                     $('#step-3').show();
                     $('#step-3 textarea').focus();
                     $('form#create_story input[name=photo_url]').val(data.url);

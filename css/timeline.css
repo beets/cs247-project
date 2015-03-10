@@ -1,8 +1,8 @@
-/*
 #main-timeline .tl-body img {
-    height: 180px;
+    max-height: 180px;
+    display: block;
+    margin: auto;
 }
-*/
 
 .timeline_new .add_story {
   display: block;
