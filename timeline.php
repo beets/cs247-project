@@ -19,7 +19,7 @@ function new_story() {
       </div>
       <div class="tl-body">
         <div class="images row">
-            <div class="col-xs-4"><a class="add_story" href="add_story.php?<? echo $get ?>">+</a></div>
+            <div class="col-xs-4"><a class="add_story" href="add_story.php?<?= $get ?>">+</a></div>
         </div>
       </div>
     </div>
@@ -30,22 +30,22 @@ function existing_story($id, $story) {
   global $get;
   ?>
   <li class="timeline-inverted existing-story">
-    <a href="story.php?<? echo $get ?>&id=<? echo $id ?>">
+    <a href="story.php?<?= $get ?>&id=<?= $id ?>">
         <div class="tl-circ"></div>
         <div class="timeline-panel">
             <div class="tl-heading">
-              <h4><? echo $story['date'] ?></h4>
+              <h4><?= $story['date'] ?></h4>
             </div>
             <div class="tl-body">
               <div class="images row">
                   <? if ($story['imagePath']) { ?>
-                  <img src="<? echo $story['imagePath'] ?>" class="img img-responsive"/>
+                  <img src="<?= $story['imagePath'] ?>" class="img img-responsive"/>
                   <? } ?>
                   <? /*if ($story['prompt']) { ?>
-                    <p><? echo $story['prompt'] ?></p>
+                    <p><?= $story['prompt'] ?></p>
                   <? } ?>
                   <? if ($story['responseText']) { ?>
-                    <p><? echo $story['responseText'] ?></p>
+                    <p><?= $story['responseText'] ?></p>
                   <? }*/ ?>
               </div>
             </div>
@@ -60,8 +60,8 @@ function existing_story($id, $story) {
 <? include 'templates/nav.html' ?>
 <div id="request" class="container-fluid">
     <div class="row header">
-        <img class="col-xs-3" src="./data/<? echo $family ?>/parent.jpg" />
-        <h1 class="col-xs-9"><? echo $parent ?>'s lifetime of experiences</h1>
+        <img class="col-xs-3" src="./data/<?= $family ?>/parent.jpg" />
+        <h1 class="col-xs-9"><?= $parent ?>'s lifetime of experiences</h1>
     </div>
     <ul class="timeline">
         <? new_story() ?>

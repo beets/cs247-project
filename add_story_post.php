@@ -25,7 +25,7 @@ $link = 'http://'.$_SERVER['SERVER_NAME'].'/moments/story.php?'.$_SERVER['QUERY_
     <h2>Hooray, you've created a story!</h2>
     <div class="row main-photo-row">
         <div class="col-xs-12">
-            <div class="main-photo" style="background-image:url(<? echo $_POST['photo_url']?>);"></div>
+            <div class="main-photo" style="background-image:url(<?= $_POST['photo_url']?>);"></div>
         </div>
     </div>
     <h3>Send this link to your parent to get the story</h3>

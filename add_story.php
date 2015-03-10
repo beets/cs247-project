@@ -42,7 +42,7 @@ $get = 'family=' . $_GET['family'];
             </div>
         </div>
     </div>
-    <form id="create_story" action="add_story_post.php?<? echo $get ?>" method="post" onkeypress="return event.keyCode != 13;">
+    <form id="create_story" action="add_story_post.php?<?= $get ?>" method="post" onkeypress="return event.keyCode != 13;">
     <div id=step-3 style="display:none">
         <input name="photo_url" type="hidden" />
         <div class="row instructions">
@@ -51,7 +51,7 @@ $get = 'family=' . $_GET['family'];
             </div>
         </div>
         <div class="row comment">
-            <img class="col-xs-2" src="./data/<? echo $family ?>/user.jpg" />
+            <img class="col-xs-2" src="./data/<?= $family ?>/user.jpg" />
             <div class="col-xs-10">
                 <textarea name="prompt" style="height: 6em">Hi Dad! I found this picture of you. The kids would love to hear more about it. Where were we when we took that photo?</textarea>
             </div>
@@ -82,7 +82,7 @@ $(function() {
         var data = new FormData();
         data.append('photo', $('input[type=file]')[0].files[0]);
         $.ajax({
-            url: 'json_upload.php?<? echo $get ?>',
+            url: 'json_upload.php?<?= $get ?>',
             type: 'POST',
             data: data,
             cache: false,
