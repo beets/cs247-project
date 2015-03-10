@@ -32,6 +32,7 @@ nav.navbar {
     color: #33312c;
 }
 
+.form-signin h1,
 .timeline h4.title,
 #main-timeline h1 {
     text-align: center;
