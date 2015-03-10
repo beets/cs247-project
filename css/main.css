@@ -76,6 +76,13 @@ a#add-story .glyphicon {
     box-shadow: 1px 2px 4px rgba(0,0,0,.3);
 }
 
+.main-photo.img {
+    box-shadow: 0 2px 12px rgba(0,0,0,.3);
+    border: none !important;
+    margin: 0 auto 2em;
+    display: block;
+}
+
 .main-photo,
 #photo-form .upload-photo {
     height: 320px;
@@ -102,6 +109,14 @@ a#add-story .glyphicon {
 
 #request textarea {
     height: 20em;
+}
+
+#request h2 {
+    margin-bottom: 1em;
+}
+
+#request .main-story {
+    margin: 1em 0 2em;
 }
 
 .glyphicon-refresh-animate {
