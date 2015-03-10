@@ -4,7 +4,7 @@
       <a class="navbar-brand" href="timeline.php?family=<?=$_GET['family']?>">Family memories</a>
     </div>
     <div class="navbar-collapse">
-      <p class="navbar-text navbar-right"><?= ucfirst($_GET['family']) ?> family</p>
+      <a class="navbar-text navbar-right" href="timeline.php?family=<?=$_GET['family']?>"><?= ucfirst($family_json['parent']) ?> <?= ucfirst($_GET['family']) ?></a>
     </div>
   </div>
 </nav>
