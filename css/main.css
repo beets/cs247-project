@@ -37,6 +37,7 @@ nav.navbar {
 #main-timeline h1 {
     text-align: center;
     font-family: 'Homemade Apple', cursive;
+    text-shadow: 0 1px 2px rgba(0,0,0,.3);
 }
 
 #main-timeline .grandpa-main {
@@ -44,8 +45,11 @@ nav.navbar {
     margin: auto;
     width: 180px;
     display: block;
-    border: 1px solid #aaa;
+    border: 1px solid #d4d4d4;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
+    background: white;
+    padding: 10px;
+    box-sizing: content-box;
 }
 
 .comments {
