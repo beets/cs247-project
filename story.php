@@ -51,7 +51,14 @@ function story($family, $story) { ?>
                 <? } ?>
 
                 <? $date = $story['date']; if ($date && !$edit) { ?>
-                <h5><?= $family_json['parent']?>'s story from <?= $date ?></h5>
+                <div class="media">
+                    <div class="media-left media-middle">
+                        <img class="grandpa-sm img" src="./data/<?= $family ?>/parent.jpg" />
+                    </div>
+                    <div class="media-body">
+                        <h5><?= $family_json['parent']?>'s story from <?= $date ?></h5>
+                    </div>
+                </div>
                 <? } else { $save = 1; ?>
                 <div class="form-group">
                     <label for="date">When was this photo taken?</label>

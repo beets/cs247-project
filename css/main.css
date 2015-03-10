@@ -111,12 +111,17 @@ a#add-story .glyphicon {
     height: 20em;
 }
 
-#request h2 {
-    margin-bottom: 1em;
-}
-
 #request .main-story {
     margin: 1em 0 2em;
+    padding: 1em;
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 3px;
+}
+
+#request .grandpa-sm {
+    border-radius: 50%;
+    height: 30px;
 }
 
 .glyphicon-refresh-animate {
