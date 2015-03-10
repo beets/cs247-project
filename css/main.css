@@ -19,6 +19,7 @@ textarea {
     height: 20px;
 }
 
+.main-photo,
 #photo-form .upload-photo {
     height: 320px;
     border: 3px solid #90acc7;
