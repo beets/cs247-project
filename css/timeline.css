@@ -18,8 +18,10 @@
 /** timeline box structure **/
 .timeline {
   list-style: none;
-  padding: 20px 0 20px;
+  padding: 120px 0 20px;
   position: relative;
+  margin: auto;
+  max-width: 600px;
 }
 
 .timeline:before {
@@ -49,6 +51,7 @@
 .timeline li {
   margin-bottom: 25px;
   position: relative;
+  height: 175px;
 }
 
 .timeline li:before, .timeline li:after {

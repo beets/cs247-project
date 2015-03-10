@@ -11,7 +11,7 @@ $get = 'family=' . $_GET['family'];
 function new_story() {
   global $get;
   ?>
-  <li class="timeline-inverted timeline_new">
+  <li class="timeline timeline_new">
     <div class="tl-circ"></div>
     <div class="timeline-panel">
       <div class="tl-heading">
@@ -29,7 +29,7 @@ function new_story() {
 function existing_story($id, $story) {
   global $get;
   ?>
-  <li class="timeline-inverted existing-story">
+  <li class="<?= ($id % 2) ? "timeline-inverted" : "" ?> existing-story">
     <a href="story.php?<?= $get ?>&id=<?= $id ?>">
         <div class="tl-circ"></div>
         <div class="timeline-panel">
@@ -41,12 +41,6 @@ function existing_story($id, $story) {
                   <? if ($story['imagePath']) { ?>
                   <img src="<?= $story['imagePath'] ?>" class="img img-responsive"/>
                   <? } ?>
-                  <? /*if ($story['prompt']) { ?>
-                    <p><?= $story['prompt'] ?></p>
-                  <? } ?>
-                  <? if ($story['responseText']) { ?>
-                    <p><?= $story['responseText'] ?></p>
-                  <? }*/ ?>
               </div>
             </div>
         </div>
@@ -71,3 +65,8 @@ function existing_story($id, $story) {
     </ul>
 </div>
 <? include 'templates/footer.html' ?>
+<script>
+$(function() {
+    
+});
+</script>
