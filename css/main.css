@@ -1,7 +1,10 @@
 body {
     background: #fdf9d8;
-    padding-top: 70px;
     padding-bottom: 30px;
+}
+
+body .navbar {
+    border-radius: 0;
 }
 
 textarea {
@@ -10,11 +13,16 @@ textarea {
 
 #main-timeline h1 {
     margin: 1em auto;
+    color: #33312c;
 }
 
 .timeline h4.title,
 #main-timeline h1 {
     text-align: center;
+    font-family: 'Homemade Apple', cursive;
+}
+
+.navbar-brand {
     font-family: 'Homemade Apple', cursive;
 }
 
@@ -53,6 +61,7 @@ a#add-story .glyphicon {
     padding: 4px 3px 5px 5px;
     border-radius: 20px;
     background: white;
+    box-shadow: 1px 2px 4px rgba(0,0,0,.3);
 }
 
 .main-photo,
