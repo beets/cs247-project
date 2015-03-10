@@ -11,6 +11,19 @@ textarea {
     width: 100%;
 }
 
+h2 {
+    color: #33312c;
+    font-family: 'Homemade Apple', cursive;
+}
+
+.navbar {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
 #main-timeline h1 {
     margin: 1em auto;
     color: #33312c;
@@ -19,10 +32,6 @@ textarea {
 .timeline h4.title,
 #main-timeline h1 {
     text-align: center;
-    font-family: 'Homemade Apple', cursive;
-}
-
-.navbar-brand {
     font-family: 'Homemade Apple', cursive;
 }
 
