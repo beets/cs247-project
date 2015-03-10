@@ -28,26 +28,31 @@ function story($family, $story) { ?>
 <? include 'templates/nav.html' ?>
 <div id="request" class="container-fluid">
     <div class="row">
-        <div class="col-xs-6">
+        <div class="col-sm-6">
             <div class="main-photo" style="background-image:url(<?= $story['imagePath']?>);"></div>
+            <div class="row comment">
+                <img class="col-xs-2" src="./data/<?= $family ?>/user.jpg" />
+                <div class="col-xs-10">
+                    <p><?= $story["prompt"] ?></p>
+                </div>
+            </div>
+            <? //story($family, $story)?>
         </div>
-        <div class="col-xs-6 form-group">
+        <div class="col-sm-6 form-group">
             <form action="story_update_json.php?<?= $get ?>" method="post">
-                <input name="date" type="hidden" placeholder="When was this photo taken?" />
-                <div class="row">&nbsp;</div>
-                <div class="row comment">
-                    <img class="col-xs-2" src="./data/<?= $family ?>/user.jpg" />
-                    <div class="col-xs-10">
-                        <p><?= $story["prompt"] ?></p>
-                    </div>
+                <div class="form-group">
+                    <label for="title">Story title</label>
+                    <input type="text" value="<?= $story['title']?>" class="form-control" name="title" placeholder="The best day of my life"/>
                 </div>
-                <? story($family, $story)?>
-                <div id="step-3" class="row">
-                    <div class="col-xs-10"></div>
-                    <div class="col-xs-2">
-                        <button type="submit" class="btn btn-primary" id="send">Send</button>
-                    </div>
+                <div class="form-group">
+                    <label for="date">When was this photo taken?</label>
+                    <input type="text" value="<?= $story['date']?>" class="form-control" name="date" placeholder="1989"/>
                 </div>
+                <div class="form-group">
+                    <label for="story">Tell us about the story</label>
+                    <textarea type="text" class="form-control" name="responseText" placeholder="Tell us about the photo. Where and when was it taken? What were you thinking or feeling at the time you took it?"><?= $story['responseText']?></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" id="send">Save</button>
             </form>
         </div>
     </div>
