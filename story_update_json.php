@@ -9,6 +9,7 @@ $family_json['stories'][$storyId]["responseText"] = $_POST['responseText'];
 $output = json_encode($family_json, JSON_PRETTY_PRINT);
 file_put_contents('./data/' . $family . '.json', $output);
 
-header('Location: timeline.php?family=' . $family);
-die();
+header('Location: story.php?' . $_SERVER['QUERY_STRING']);
+//header('Location: timeline.php?family=' . $family);
+//die();
 ?>
