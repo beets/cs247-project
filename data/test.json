@@ -2,6 +2,47 @@
     "parent": "Grandpa",
     "stories": [
         {
+            "title": "Growing up",
+            "date": 1997,
+            "prompt": "Hi Dad! I found this picture of mom. The kids would love to hear more about it. Where were we when we took that photo?",
+            "responseText": "It was the summer of '69. I was young and hot...",
+            "audioPath": null,
+            "imagePath": "./data/test/story.jpg"
+        },
+        {
+            "title": "Growing up",
+            "date": 1997,
+            "prompt": "Hi Dad! I found this picture of mom. The kids would love to hear more about it. Where were we when we took that photo?",
+            "responseText": "It was the summer of '69. I was young and hot...",
+            "audioPath": null,
+            "imagePath": "./data/test/story.jpg"
+        },
+        {
+            "title": "Growing up",
+            "date": 1997,
+            "prompt": "Hi Dad! I found this picture of mom. The kids would love to hear more about it. Where were we when we took that photo?",
+            "responseText": "It was the summer of '69. I was young and hot...",
+            "audioPath": null,
+            "imagePath": "./data/test/story.jpg"
+        },
+        {
+            "title": "Growing up",
+            "date": 1997,
+            "prompt": "Hi Dad! I found this picture of mom. The kids would love to hear more about it. Where were we when we took that photo?",
+            "responseText": "It was the summer of '69. I was young and hot...",
+            "audioPath": null,
+            "imagePath": "./data/test/story.jpg"
+        },
+        {
+            "title": "Growing up",
+            "date": 1997,
+            "prompt": "Hi Dad! I found this picture of mom. The kids would love to hear more about it. Where were we when we took that photo?",
+            "responseText": "It was the summer of '69. I was young and hot...",
+            "audioPath": null,
+            "imagePath": "./data/test/story.jpg"
+        },
+        {
+            "title": "Growing up",
             "date": 1997,
             "prompt": "Hi Dad! I found this picture of mom. The kids would love to hear more about it. Where were we when we took that photo?",
             "responseText": "It was the summer of '69. I was young and hot...",
