@@ -1,5 +1,5 @@
 body {
-    background: #fdf9d8;
+    background: #fdfbe7;
     padding-bottom: 30px;
 }
 
@@ -16,12 +16,15 @@ h2 {
     font-family: 'Homemade Apple', cursive;
 }
 
-.navbar {
+nav.navbar {
     font-family: 'Josefin Sans', sans-serif;
+    background: #3e3d38;
+    border-width: 0 0 1px 0;
 }
 
 .navbar-brand {
-    font-weight: bold;
+    font-weight: bold !important;
+    color: white !important;
 }
 
 #main-timeline h1 {
