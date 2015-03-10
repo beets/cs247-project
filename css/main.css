@@ -19,6 +19,21 @@ textarea {
     height: 20px;
 }
 
+a#add-story {
+    display: inline-block;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+a#add-story .glyphicon {
+    font-size: 24px;
+    display: inline-block;
+    border: 4px solid;
+    padding: 4px 3px 4px 5px;
+    border-radius: 20px;
+}
+
 .main-photo,
 #photo-form .upload-photo {
     height: 320px;

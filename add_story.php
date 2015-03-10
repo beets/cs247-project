@@ -14,7 +14,7 @@ $get = 'family=' . $_GET['family'];
 <? include 'templates/nav.html' ?>
 <div id="request" class="container-fluid">
     <h2>Add a story</h2>
-    <div id=step-1 class="main-photo">
+    <div id=step-1>
         <div>
             <div class="row" id="instructions">
                 <div class="col-xs-12">

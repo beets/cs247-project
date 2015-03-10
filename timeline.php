@@ -11,7 +11,7 @@ $get = 'family=' . $_GET['family'];
 function new_story() {
   global $get;
   ?>
-  <li class="timeline timeline_new">
+  <li class="timeline-inverted timeline_new">
     <div class="tl-circ"></div>
     <div class="timeline-panel">
       <div class="tl-heading">
@@ -32,16 +32,17 @@ function existing_story($id, $story) {
   <li class="<?= ($id % 2) ? "timeline-inverted" : "" ?> existing-story">
     <a href="story.php?<?= $get ?>&id=<?= $id ?>">
         <div class="tl-circ"></div>
+        <div class="tl-date">
+           <h4><?= $story['date'] ?></h4>
+        </div>
         <div class="timeline-panel">
-            <div class="tl-heading">
-              <h4><?= $story['date'] ?></h4>
-            </div>
             <div class="tl-body">
               <div class="images row">
                   <? if ($story['imagePath']) { ?>
                   <img src="<?= $story['imagePath'] ?>" class="img img-responsive"/>
                   <? } ?>
               </div>
+              <h4><?= $story['title'] ?></h4>
             </div>
         </div>
     </a>
@@ -57,13 +58,17 @@ function existing_story($id, $story) {
         <img class="col-xs-3" src="./data/<?= $family ?>/parent.jpg" />
         <h1 class="col-xs-9"><?= $parent ?>'s lifetime of experiences</h1>
     </div>
-    <ul class="timeline">
-        <? new_story() ?>
-        <? for ($i = count($stories) - 1; $i >= 0; --$i) { ?>
-        <? existing_story($i, $stories[$i]); ?>
-        <? } ?>
-    </ul>
+    <div class="timeline-container">
+        <ul class="timeline">
+            <? for ($i = count($stories) - 1; $i >= 0; --$i) { ?>
+            <? existing_story($i, $stories[$i]); ?>
+            <? } ?>
+        </ul>
+    </div>
 </div>
+<a id="add-story" href="add_story.php?<?= $_SERVER['QUERY_STRING']?>">
+    <span class="glyphicon glyphicon-plus"></span>
+</a>
 <? include 'templates/footer.html' ?>
 <script>
 $(function() {
