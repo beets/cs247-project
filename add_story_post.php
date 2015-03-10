@@ -14,7 +14,7 @@ $id = array_push($family_json['stories'], $newStory) - 1;
 $output = json_encode($family_json, JSON_PRETTY_PRINT);
 file_put_contents('data/' . $family . '.json', $output);
 
-$link = 'http://'.$_SERVER['SERVER_NAME'].'/moments/story.php?'.$_SERVER['QUERY_STRING'].'&id='.$id;
+$link = 'http://'.$_SERVER['SERVER_NAME'].'/moments/story.php?'.$_SERVER['QUERY_STRING'].'&id='.$id.'&edit=1';
 
 //header('Location: timeline.php?family=' . $family);
 ?>
