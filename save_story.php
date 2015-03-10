@@ -5,7 +5,6 @@ $family_json = json_decode($family_file, true);
 
 //The page that calls this URL will send values for date and prompt
 $newStory = array(
-  "date" => trim($_POST['date']),
   "prompt" => trim($_POST['prompt']),
   "responseText" => null,
   "audioPath" => null,

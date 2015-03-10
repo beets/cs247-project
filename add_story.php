@@ -43,23 +43,11 @@ $get = 'family=' . $_GET['family'];
         </div>
     </div>
     <form id="save_story" action="save_story.php?<? echo $get ?>" method="post" onkeypress="return event.keyCode != 13;">
-    <div id=step-2 style="display:none">
-        <div class="row instructions">
-            <div class="col-xs-12">
-                <h5>Step 2: When was this photo taken?</h5>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12">
-                <input name="date" type="text" placeholder="1989" />
-            </div>
-        </div>
-    </div>
     <div id=step-3 style="display:none">
         <input name="photo_url" type="hidden" />
         <div class="row instructions">
             <div class="col-xs-12">
-                <h5>Step 3: Write a message for your parent</h5>
+                <h5>Step 2: Write a message for your parent</h5>
             </div>
         </div>
         <div class="row comment">
@@ -88,14 +76,6 @@ $(function() {
         $('.glyphicon-refresh-animate').show();
         $('form#photo-upload').submit();
     });
-    function step3() {
-        $('#step-2 .instructions h5').text('Story date');
-        $('#step-3').show();
-        $('#step-3 textarea').focus();
-    };
-    $('#step-2 input').focusout(function() {
-        step3();
-    });
     $('form#photo-upload').submit(function(event) {
         event.stopPropagation(); // Stop stuff happening
         event.preventDefault(); // Totally stop stuff happening
@@ -112,12 +92,10 @@ $(function() {
             success: function(data, textStatus, jqXHR) {
                 if (data.url) {
                     // Success
-                    //$('#photo-form').hide();
                     $('#photo-form .upload-photo').empty().css('background-image', 'url(' + data.url + ')');
                     $('#instructions').hide();
-                    $('#step-2').show();
-                    //$('#photo-uploaded img').attr('src', data.url);
-                    //$('#photo-uploaded').show();
+                    $('#step-3').show();
+                    $('#step-3 textarea').focus();
                     $('form#save_story input[name=photo_url]').val(data.url);
                 } else {
                     // Handle errors here
