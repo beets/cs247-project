@@ -3,51 +3,51 @@
     "stories": [
         {
             "title": "Growing up",
-            "date": 1997,
+            "date": 1900,                                                                                                                                              
             "prompt": "Hi Dad! I found this picture of mom. The kids would love to hear more about it. Where were we when we took that photo?",
             "responseText": "It was the summer of '69. I was young and hot...",
             "audioPath": null,
-            "imagePath": "./data/test/story.jpg"
+            "imagePath": ".\/data\/test\/story.jpg"
         },
         {
             "title": "Growing up",
-            "date": 1997,
+            "date": 1905,
             "prompt": "Hi Dad! I found this picture of mom. The kids would love to hear more about it. Where were we when we took that photo?",
             "responseText": "It was the summer of '69. I was young and hot...",
             "audioPath": null,
-            "imagePath": "./data/test/story.jpg"
+            "imagePath": ".\/data\/test\/story.jpg"
         },
         {
             "title": "Growing up",
-            "date": 1997,
+            "date": 1906,
             "prompt": "Hi Dad! I found this picture of mom. The kids would love to hear more about it. Where were we when we took that photo?",
             "responseText": "It was the summer of '69. I was young and hot...",
             "audioPath": null,
-            "imagePath": "./data/test/story.jpg"
+            "imagePath": ".\/data\/test\/story.jpg"
         },
         {
             "title": "Growing up",
-            "date": 1997,
+            "date": 1907,
             "prompt": "Hi Dad! I found this picture of mom. The kids would love to hear more about it. Where were we when we took that photo?",
             "responseText": "It was the summer of '69. I was young and hot...",
             "audioPath": null,
-            "imagePath": "./data/test/story.jpg"
+            "imagePath": ".\/data\/test\/story.jpg"
         },
         {
             "title": "Growing up",
-            "date": 1997,
+            "date": "1940",
             "prompt": "Hi Dad! I found this picture of mom. The kids would love to hear more about it. Where were we when we took that photo?",
-            "responseText": "It was the summer of '69. I was young and hot...",
+            "responseText": "Migas Vice pickled blog drinking vinegar. Lomo actually 90's church-key, fingerstache messenger bag retro selvage Etsy Thundercats squid tousled butcher master cleanse. Portland leggings beard Vice, ugh migas brunch salvia 8-bit vegan. Hashtag art party DIY, wolf YOLO tote bag meggings butcher literally next level 90's vegan farm-to-table viral. Banjo sustainable slow-carb, tattooed squid McSweeney's Blue Bottle. Tumblr occupy craft beer, polaroid seitan hella irony mumblecore Marfa tilde. Disrupt pickled trust fund tofu, cornhole gastropub literally Bushwick retro locavore roof party food truck shabby chic.\r\n\r\nCrucifix raw denim fingerstache shabby chic YOLO. Hella jean shorts Kickstarter, Blue Bottle Echo Park seitan chillwave Pinterest selfies mustache crucifix Schlitz Etsy lo-fi meditation. Fixie bicycle rights PBR meditation cliche. 90's fixie whatever tattooed hella cronut tousled Intelligentsia. Farm-to-table biodiesel semiotics migas Williamsburg, health goth cornhole +1 ugh 3 wolf moon organic bitters. Bicycle rights next level forage Etsy actually, 8-bit ugh Portland banjo raw denim gentrify pour-over plaid slow-carb. Tilde meh ethical cred.",
             "audioPath": null,
-            "imagePath": "./data/test/story.jpg"
+            "imagePath": ".\/data\/test\/story.jpg"
         },
         {
             "title": "Growing up",
-            "date": 1997,
+            "date": "1997",
             "prompt": "Hi Dad! I found this picture of mom. The kids would love to hear more about it. Where were we when we took that photo?",
-            "responseText": "It was the summer of '69. I was young and hot...",
-            "audioPath": null,
-            "imagePath": "./data/test/story.jpg"
+            "responseText": "Deserunt American Apparel minim tempor, nulla paleo odio placeat Blue Bottle butcher Helvetica selvage. PBR mlkshk cornhole VHS ad yr. Cold-pressed iPhone asymmetrical leggings officia retro. Kitsch sunt anim chambray, deep v meh labore aliqua tofu. Organic Pitchfork sed cold-pressed, tilde actually non commodo. Placeat accusamus commodo keytar Banksy Truffaut. Master cleanse ugh aliqua, sartorial 90's id eiusmod twee aliquip slow-carb duis cold-pressed aute.\r\n\r\nSemiotics duis selvage in Carles et YOLO pickled biodiesel, stumptown banjo Odd Future. Carles Etsy locavore, dolore American Apparel keytar put a bird on it Pinterest est single-origin coffee. Hoodie Neutra next level consectetur Banksy. Irony Pitchfork twee, try-hard yr VHS put a bird on it hella. Bicycle rights flexitarian in, leggings qui put a bird on it accusamus ullamco duis whatever shabby chic. Whatever cray enim Austin slow-carb reprehenderit. Truffaut elit selvage, Shoreditch roof party put a bird on it wayfarers minim tote bag aliquip blog XOXO iPhone.",
+            "audioPath": null, 
+            "imagePath": ".\/data\/test\/story.jpg"
         }
     ]
-}
+} 
