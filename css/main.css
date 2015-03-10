@@ -19,17 +19,47 @@ textarea {
     height: 20px;
 }
 
-.upload-photo .glyphicon { color: white;
-    display: block;
-    font-size: 2em;
+#photo-form .upload-photo {
     height: 320px;
-    line-height: 320px;
     border: 3px solid #90acc7;
     background: #6a8db3;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#photo-form .upload-photo .glyphicon {
+    display: block;
+    height: 320px;
+    line-height: 320px;
+    color: white;
+    font-size: 2em;
     text-align: center;
     cursor: pointer;
 }
 
 .instructions {
     margin-top: 1em;
+}
+
+.glyphicon-refresh-animate {
+    -animation: spin 2s infinite linear;
+    -ms-animation: spin 2s infinite linear;
+    -webkit-animation: spinw 2s infinite linear;
+    -moz-animation: spinm 2s infinite linear;
+}
+ 
+@keyframes spin {
+    from { transform: scale(1) rotate(0deg);}
+    to { transform: scale(1) rotate(360deg);}
+}
+  
+@-webkit-keyframes spinw {
+    from { -webkit-transform: rotate(0deg);}
+    to { -webkit-transform: rotate(360deg);}
+}
+ 
+@-moz-keyframes spinm {
+    from { -moz-transform: rotate(0deg);}
+    to { -moz-transform: rotate(360deg);}
 }

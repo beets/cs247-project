@@ -15,22 +15,28 @@ $get = 'family=' . $_GET['family'];
 <div id="request" class="container-fluid">
     <h2>Add a story</h2>
     <div id=step-1 class="main-photo">
-        <div class="upload-photo">
+        <div>
             <div class="row" id="instructions">
                 <div class="col-xs-12">
                     <h5>Step 1: Upload an photo</h5>
                 </div>
             </div>
             <div id="photo-form" class="row">
-                <form id="photo-upload" action="json_upload.php" method="post" enctype="multipart/form-data">
-                    <div class="col-xs-6">
-                        <input type="file" name="photo" accept="image/*" capture="">
+                <div class="col-xs-12">
+                    <div class="upload-photo">
+                        <span class="glyphicon glyphicon-camera"></span>
+                        <span class="glyphicon glyphicon-refresh glyphicon-refresh-animate" style="display:none"></span>
                     </div>
-                    <div class="col-xs-6">
-                        <input type="submit" name="upload" value="Upload">
-                    </div>
-                </form>
+                </div>
             </div>
+            <form id="photo-upload" action="json_upload.php" method="post" enctype="multipart/form-data" style="display:none">
+                <div class="col-xs-6">
+                    <input type="file" name="photo" accept="image/*" capture="">
+                </div>
+                <div class="col-xs-6">
+                    <input type="submit" name="upload" value="Upload">
+                </div>
+            </form>
             <div id="photo-uploaded" class="row" style="display:none">
                 <img class="img img-responsive col-xs-12" />
             </div>
@@ -74,6 +80,14 @@ $get = 'family=' . $_GET['family'];
 <? include 'templates/footer.html' ?>
 <script>
 $(function() {
+    $('#photo-form .upload-photo .glyphicon-camera').click(function() {
+        $('input[name=photo]').click();
+    });
+    $('form#photo-upload input[name=photo]').change(function() {
+        $('.glyphicon-camera').hide();
+        $('.glyphicon-refresh-animate').show();
+        $('form#photo-upload').submit();
+    });
     function step3() {
         $('#step-2 .instructions h5').text('Story date');
         $('#step-3').show();
@@ -98,11 +112,12 @@ $(function() {
             success: function(data, textStatus, jqXHR) {
                 if (data.url) {
                     // Success
-                    $('#photo-form').hide();
+                    //$('#photo-form').hide();
+                    $('#photo-form .upload-photo').empty().css('background-image', 'url(' + data.url + ')');
                     $('#instructions').hide();
                     $('#step-2').show();
-                    $('#photo-uploaded img').attr('src', data.url);
-                    $('#photo-uploaded').show();
+                    //$('#photo-uploaded img').attr('src', data.url);
+                    //$('#photo-uploaded').show();
                     $('form#save_story input[name=photo_url]').val(data.url);
                 } else {
                     // Handle errors here

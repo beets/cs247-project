@@ -1,9 +1,14 @@
 <?
 
+/*
+ini_set('error_reporting', E_ALL);
+ini_set('display_errors', 'On');
+*/
+
 $ret = array('ok' => 1);
 
 $target_dir = "uploads/";
-$target_file = $target_dir . basename($_FILES["photo"]["name"]);
+$target_file = $target_dir . time();
 
 // Check if image file is a actual image or fake image
 if(isset($_POST["submit"])) {
