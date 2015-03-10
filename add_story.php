@@ -42,7 +42,7 @@ $get = 'family=' . $_GET['family'];
             </div>
         </div>
     </div>
-    <form id="save_story" action="save_story.php?<? echo $get ?>" method="post" onkeypress="return event.keyCode != 13;">
+    <form id="create_story" action="add_story_post.php?<? echo $get ?>" method="post" onkeypress="return event.keyCode != 13;">
     <div id=step-3 style="display:none">
         <input name="photo_url" type="hidden" />
         <div class="row instructions">
@@ -96,7 +96,7 @@ $(function() {
                     $('#instructions').hide();
                     $('#step-3').show();
                     $('#step-3 textarea').focus();
-                    $('form#save_story input[name=photo_url]').val(data.url);
+                    $('form#create_story input[name=photo_url]').val(data.url);
                 } else {
                     // Handle errors here
                     console.log('ERRORS: ' + data.error);
