@@ -1,10 +1,10 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="timeline.php?family=<?=$_GET['family']?>">Moments</a>
+      <a class="navbar-brand" href="timeline.php?<?=$get?>">Moments</a>
     </div>
     <div class="navbar-collapse">
-      <a class="navbar-text navbar-right" href="timeline.php?family=<?=$_GET['family']?>"><?= ucfirst($family_json['parent']) ?> <?= ucfirst($_GET['family']) ?></a>
+      <a class="navbar-text navbar-right" href="index.php?>"><?= $user_name ?> (logout)</a>
     </div>
   </div>
 </nav>
