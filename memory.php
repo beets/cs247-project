@@ -68,6 +68,8 @@ function display_response($response) {
 $(function() {
     $('button#video').click(function() {
         $('#photo-upload input[name=photo]').click();
+        // XXX don't hide buttons / deal with error or back
+        // XXX add reminder to point camera forward
         $('.buttons').hide();
     });
     $('button#text').click(function() {
