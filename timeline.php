@@ -1,12 +1,4 @@
-<?
-$family = $_GET['family'];
-$family_file = file_get_contents('./data/' . $family . '.json');
-$family_json = json_decode($family_file, true);
-//echo var_dump($family_json);
-$parent = $family_json['parent'];
-$stories = $family_json['stories'];
-
-$get = 'family=' . $_GET['family'];
+<? include('common.php');
 
 function new_story() {
   global $get;
@@ -26,23 +18,20 @@ function new_story() {
   </li>
 <? }
 
-function existing_story($id, $story) {
+function existing_memory($id, $memory) {
   global $get;
   ?>
-  <li class="<?= ($id % 2) ? "timeline-inverted" : "" ?> existing-story">
-    <a href="story.php?<?= $get ?>&id=<?= $id ?>">
+  <li class="existing-memory">
+    <a href="memory.php?<?= $get ?>&id=<?= $id ?>">
         <div class="tl-circ"></div>
-        <div class="tl-date">
-           <h4><?= $story['date'] ?></h4>
-        </div>
         <div class="timeline-panel">
             <div class="tl-body">
               <div class="images row">
-                  <? if ($story['imagePath']) { ?>
-                  <img src="<?= $story['imagePath'] ?>" class="img img-responsive center"/>
+                  <? if ($memory['photo_url']) { ?>
+                  <img src="<?= $memory['photo_url'] ?>" class="img img-responsive center"/>
                   <? } ?>
               </div>
-              <h4 class="title"><?= $story['title'] ?></h4>
+              <h4 class="title"><?= $memory['title'] ?></h4>
             </div>
         </div>
     </a>
@@ -60,8 +49,8 @@ function existing_story($id, $story) {
     </div>
     <div class="timeline-container">
         <ul class="timeline">
-            <? for ($i = count($stories) - 1; $i >= 0; --$i) { ?>
-            <? existing_story($i, $stories[$i]); ?>
+            <? for ($i = count($memories) - 1; $i >= 0; --$i) { ?>
+            <? existing_memory($i, $memories[$i]); ?>
             <? } ?>
         </ul>
     </div>
