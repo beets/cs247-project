@@ -7,8 +7,9 @@ ini_set('display_errors', 'On');
 
 $ret = array('ok' => 1);
 
+$extension = pathinfo($_FILES['photo']['name'], PATHINFO_EXTENSION);
 $target_dir = "uploads/";
-$target_file = $target_dir . time();
+$target_file = $target_dir . time() . '.' . $extension;
 
 // Check if image file is a actual image or fake image
 if(isset($_POST["submit"])) {

@@ -18,6 +18,10 @@
                 {
                     "text": "You guys are wimps, only triple espressos all the way",
                     "member": 2
+                },
+                {
+                    "member": 1,
+                    "video_url": "data/test/sera.mp4"
                 }
             ]
         },
