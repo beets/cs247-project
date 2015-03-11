@@ -1,6 +1,7 @@
 <?
 include('common.php');
 $memory = $memories[$_GET['id']];
+$edit_mode = $_GET['edit'];
 
 function display_response($response) {
     global $family_json;
@@ -35,9 +36,18 @@ function display_response($response) {
             <h2><?= $memory['prompt'] ?></h2>
         </div>
     </div>
-    <? //for ($i = count($memory['responses']); $i >= 0; --$i) { ?>
-    <? for ($i = 0; $i < count($memory['responses']); ++$i) { ?>
-        <? display_response($memory['responses'][$i]) ?>
+    <? if ($edit_mode) { ?>
+        <form action="memory_update.php?<?=$_SERVER['QUERY_STRING'] ?>" method="post">
+            <div class="form-group">
+                <textarea name=text class="form-control"></textarea>
+            </div>
+            <button class="btn btn-primary" type=submit>Add memory</button>
+        </form>
+    <? } else { ?>
+        <? //for ($i = count($memory['responses']); $i >= 0; --$i) { ?>
+        <? for ($i = 0; $i < count($memory['responses']); ++$i) { ?>
+            <? display_response($memory['responses'][$i]) ?>
+        <? } ?>
     <? } ?>
 </div>
 <? include 'templates/footer.html' ?>

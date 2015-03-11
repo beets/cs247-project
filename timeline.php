@@ -20,14 +20,18 @@ function new_story() {
 
 function existing_memory($id, $memory) {
   global $get, $user_id;
-  $url_get = $get . '&id=' . $id;
-  $url = 'memory_update.php?' . $url_get;
-  $class = '';
+  $completed = false;
   for ($i = 0; $i < count($memory['responses']); ++$i) {
     if ($memory['responses'][$i]['member'] == $user_id) {
-      $url = 'memory.php?' . $url_get;
-      $class .= 'memory-completed';
+      $completed = true;
     }
+  }
+  $url = 'memory.php?' . $get . '&id=' . $id;
+  $class = '';
+  if ($completed) {
+      $class .= 'memory-completed';
+  } else {
+      $url .= '&edit=1';
   }
   ?>
   <li class="existing-memory <?=$class?>">
