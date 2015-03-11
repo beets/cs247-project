@@ -1,18 +1,8 @@
-<?
-$family = $_GET['family'];
-$family_file = file_get_contents('./data/' . $family . '.json');
-$family_json = json_decode($family_file, true);
-//echo var_dump($family_json);
-$parent = $family_json['parent'];
-$stories = $family_json['stories'];
-
-$get = 'family=' . $_GET['family'];
-
-?>
+<?  include 'common.php'; ?>
 
 <? include 'templates/header.html' ?>
 <? include 'templates/nav.html' ?>
-<div id="request" class="container-fluid">
+<div id="create" class="container-fluid">
     <h2>Add a story</h2>
     <div id=step-1>
         <div>
@@ -42,26 +32,18 @@ $get = 'family=' . $_GET['family'];
             </div>
         </div>
     </div>
-    <form id="create_story" action="add_story_post.php?<?= $get ?>" method="post" onkeypress="return event.keyCode != 13;">
+    <form id="create_story" action="memory_create_post.php?<?= $get ?>" method="post" onkeypress="return event.keyCode != 13;">
     <div id=step-3 style="display:none">
         <input name="photo_url" type="hidden" />
-        <div class="row instructions">
-            <div class="col-xs-12">
-                <h5>Step 2: Write a message for your parent</h5>
-            </div>
+        <div class="form-group">
+            <label for="title">Caption this photo</label>
+            <input type=text name=title class="form-control" />
         </div>
-        <div class="row comment">
-            <img class="col-xs-2" src="./data/<?= $family ?>/user.jpg" />
-            <div class="col-xs-10">
-                <textarea name="prompt" style="height: 6em">Hi Dad! I found this picture of you. The kids would love to hear more about it. Where were we when we took that photo?</textarea>
-            </div>
+        <div class="form-group">
+            <label for="prompt">Ask your family to add this memory</label>
+            <textarea name=prompt class="form-control">Hey guys, what do you think?</textarea>
         </div>
-        <div class="row">
-            <div class="col-xs-10"></div>
-            <div class="col-xs-2">
-                <button type="submit" class="btn btn-primary" id="send">Send</button>
-            </div>
-        </div>
+        <button type="submit" class="btn btn-primary" id="send">Send</button>
     </div>
     </form>
 </div>

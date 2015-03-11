@@ -5,11 +5,11 @@
         "Ruchi",
         "Pravir"
     ],
-    "memory": [
+    "memories": [
         {
             "title": "Need more coffee",
             "prompt": "What's your pick me up beverage?",
-            "photo": "./data/test/relax.jpg",
+            "photo_url": "./data/test/relax.jpg",
             "responses": [
                 {
                     "text": "I personally only take RedBull",
@@ -24,7 +24,7 @@
         {
             "title": "Need more coffee",
             "prompt": "What's your pick me up beverage?",
-            "photo": "./data/test/macaroons.jpg",
+            "photo_url": "./data/test/macaroons.jpg",
             "responses": [
                 {
                     "text": "I personally only take RedBull",
