@@ -29,32 +29,10 @@
   height: 65px;
 }
 
-.timeline-container {
-  margin: auto;
-  max-width: 600px;
-}
-
-.tl-date {
-  position: absolute;
-  top: 131px;
-  left: 60%;
-  text-align: center;
-  color: #000;
-  width: 35px;
-  height: 35px;
-  line-height: 35px;
-  margin-left: -16px;
-  z-index: 99999;
-}
-
-.timeline li.timeline-inverted .tl-date {
-  left: 40%;
-}
-
 /** timeline box structure **/
 .timeline {
   list-style: none;
-  padding: 40px 0 0;
+  padding: 20px 0;
   position: relative;
 }
 
@@ -85,7 +63,6 @@
 .timeline li {
   margin-bottom: 25px;
   position: relative;
-  height: 175px;
 }
 
 .timeline li:before, .timeline li:after {
@@ -119,7 +96,7 @@
 /** panel arrows **/
 .timeline li .timeline-panel:before {
   position: absolute;
-  top: 132px;
+  top: 26px;
   right: -15px;
   display: inline-block;
   border-top: 15px solid transparent;
@@ -131,7 +108,7 @@
 
 .timeline li .timeline-panel:after {
   position: absolute;
-  top: 133px;
+  top: 27px;
   right: -14px;
   display: inline-block;
   border-top: 14px solid transparent;
@@ -169,7 +146,7 @@
 /** timeline circle icons **/
 .timeline li .tl-circ {
   position: absolute;
-  top: 131px;
+  top: 23px;
   left: 50%;
   text-align: center;
   background: #6a8db3;
