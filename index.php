@@ -1,3 +1,8 @@
+<?
+if ($_GET['reply']) {
+    include('common.php');
+}
+?>
 <? include 'templates/header.html' ?>
 <style>
 body {
@@ -39,8 +44,11 @@ body {
     <div id="request" class="container">
         <form action="login.php" method="get" class="form-signin">
             <h1>Moments</h1>
-            <input name="family_name" type="text" placeholder="Family name" class="top form-control" />
+            <input name="family_name" type="text" placeholder="Family name" class="top form-control" 
+                <? if (isset($family_json)) { echo 'value="' . $family_json['family'] . '"'; } ?>
+            />
             <input name="user_name" type="text" placeholder="Your name" class="bottom form-control" />
+            <input name="reply_id" type="hidden" value="<?=$_GET['reply']?>" />
             <button type="submit" class="btn btn-lg btn-primary btn-block">Enter</button>
         </form>
     </div>

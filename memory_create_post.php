@@ -13,7 +13,7 @@ $output = json_encode($family_json, JSON_PRETTY_PRINT);
 file_put_contents($family_file_path, $output);
 
 // Add user id here (or always assume user 0 responds
-$link = 'http://'.$_SERVER['SERVER_NAME'].'/moments/memory.php?'.$_SERVER['QUERY_STRING'].'&id='.$id.'&edit=1';
+$link = 'http://'.$_SERVER['SERVER_NAME'].'/moments/index.php?family='.$family_id.'&reply='.$id;
 ?>
 
 <? include 'templates/header.html' ?>
