@@ -1,5 +1,5 @@
 <?
-$family_name = strtolower($_GET['family_name']);
+$family_name = strtolower(str_replace(' ', '_', $_GET['family_name']));
 $user_name = trim(urldecode($_GET['user_name']));
 $file_path = './data/' . $family_name . '.json';
 
@@ -24,6 +24,7 @@ for ($i = 0; $i < count($family_json['members']); ++$i) {
 }
 if ($user_id < 0) {
     array_push($family_json['members'], $user_name);
+    $user_id = 0;
 }
 $output = json_encode($family_json, JSON_PRETTY_PRINT);
 file_put_contents($file_path, $output);

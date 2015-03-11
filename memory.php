@@ -20,10 +20,6 @@ function display_response($response) {
 
 <? include 'templates/header.html' ?>
 <? include 'templates/nav.html' ?>
-<pre>
-* Add link back to timeline?
-* Color for each user
-</pre>
 <div id="memory" class="container-fluid">
     <div class="row">
         <div class="col-xs-12">
