@@ -1,6 +1,6 @@
 <?
 $family_name = $_GET['family'];
-$user_id = $_GET['user'] || 0;
+$user_id = $_GET['user'];
 
 $family_file = file_get_contents('./data/' . $family_name . '.json');
 

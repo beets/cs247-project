@@ -4,6 +4,7 @@ function new_story() {
   global $get;
   ?>
   <li class="timeline-inverted timeline_new">
+    <a href="memory_create.php?<?= $get ?>">
     <div class="tl-circ"></div>
     <div class="timeline-panel">
       <div class="tl-heading">
@@ -11,10 +12,11 @@ function new_story() {
       </div>
       <div class="tl-body">
         <div class="images row">
-            <div class="col-xs-4"><a class="add_story" href="memory_create.php?<?= $get ?>">+</a></div>
+            <div class="col-xs-4"><div class="add_story">+</div></div>
         </div>
       </div>
     </div>
+    </a>
   </li>
 <? }
 
@@ -74,6 +76,9 @@ function existing_memory($id, $memory) {
     <h1><?= $family_name ?> memories</h1>
     <div class="timeline-container">
         <ul class="timeline">
+            <? if (count($memories) == 0) {
+                new_story();
+            } ?>
             <? for ($i = count($memories) - 1; $i >= 0; --$i) { ?>
             <? existing_memory($i, $memories[$i]); ?>
             <? } ?>
