@@ -4,6 +4,10 @@
     margin: auto;
 }
 
+.timeline .memory-completed {
+    background: #fff;
+}
+
 .timeline_new .add_story {
   display: block;
   color: white;

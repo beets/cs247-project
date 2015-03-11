@@ -19,17 +19,24 @@ function new_story() {
 <? }
 
 function existing_memory($id, $memory) {
-  global $get;
+  global $get, $user_id;
+  $url_get = $get . '&id=' . $id;
+  $url = 'memory_update.php?' . $url_get;
+  $class = '';
+  for ($i = 0; $i < count($memory['responses']); ++$i) {
+    if ($memory['responses'][$i]['member'] == $user_id) {
+      $url = 'memory.php?' . $url_get;
+      $class .= 'memory-completed';
+    }
+  }
   ?>
-  <li class="existing-memory">
-    <a href="memory.php?<?= $get ?>&id=<?= $id ?>">
+  <li class="existing-memory <?=$class?>">
+    <a href="<?= $url ?>">
         <div class="tl-circ"></div>
         <div class="timeline-panel">
             <div class="tl-body">
               <div class="images row">
-                  <? if ($memory['photo_url']) { ?>
                   <img src="<?= $memory['photo_url'] ?>" class="img img-responsive center"/>
-                  <? } ?>
               </div>
               <h4 class="title"><?= $memory['title'] ?></h4>
             </div>
