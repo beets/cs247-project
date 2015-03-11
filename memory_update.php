@@ -15,7 +15,7 @@ if ($video_url) {
 }
 array_push($family_json['memories'][$memory_id]['responses'], $new_response);
 $output = json_encode($family_json, JSON_PRETTY_PRINT);
-file_put_contents('./data/' . $family_name . '.json', $output);
+file_put_contents($family_file_path, $output);
 
 $get .= '&id=' . $memory_id;
 header('Location: memory.php?' . $get);

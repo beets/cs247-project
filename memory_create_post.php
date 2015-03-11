@@ -10,7 +10,7 @@ $new_memory = array(
 );
 $id = array_push($family_json['memories'], $new_memory) - 1;
 $output = json_encode($family_json, JSON_PRETTY_PRINT);
-file_put_contents('data/' . $family_name . '.json', $output);
+file_put_contents($family_file_path, $output);
 
 // Add user id here (or always assume user 0 responds
 $link = 'http://'.$_SERVER['SERVER_NAME'].'/moments/story.php?'.$_SERVER['QUERY_STRING'].'&id='.$id.'&edit=1';

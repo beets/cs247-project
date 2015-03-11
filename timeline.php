@@ -73,7 +73,7 @@ function existing_memory($id, $memory) {
 <? include 'templates/header.html' ?>
 <? include 'templates/nav.html' ?>
 <div id="main-timeline" class="container-fluid">
-    <h1><?= $family_name ?> memories</h1>
+    <h1><?= $family_json['family'] ?> memories</h1>
     <div class="timeline-container">
         <ul class="timeline">
             <? if (count($memories) == 0) {
