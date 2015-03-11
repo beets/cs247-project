@@ -11,7 +11,7 @@ function new_story() {
       </div>
       <div class="tl-body">
         <div class="images row">
-            <div class="col-xs-4"><a class="add_story" href="add_story.php?<?= $get ?>">+</a></div>
+            <div class="col-xs-4"><a class="add_story" href="memory_create.php?<?= $get ?>">+</a></div>
         </div>
       </div>
     </div>
@@ -80,7 +80,7 @@ function existing_memory($id, $memory) {
         </ul>
     </div>
 </div>
-<a id="add-story" href="add_story.php?<?= $_SERVER['QUERY_STRING']?>">
+<a id="add-story" href="memory_create.php?<?= $get?>">
     <span class="glyphicon glyphicon-plus"></span>
 </a>
 <? include 'templates/footer.html' ?>
