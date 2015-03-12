@@ -1,5 +1,5 @@
 body {
-    background: #fdfbe7;
+    background: #fff;
     padding-bottom: 30px;
 }
 
@@ -13,13 +13,52 @@ textarea {
 
 h2 {
     color: #33312c;
-    font-family: 'Homemade Apple', cursive;
+    font-family: Copse, sans-serif;
 }
 
-nav.navbar {
-    font-family: 'Josefin Sans', sans-serif;
-    background: #3e3d38;
+#nav.navbar {
+    font-family: 'Copse', sans-serif;
+    background: #6a8492;
+    background: #354257;
     border-width: 0 0 1px 0;
+}
+
+#nav.navbar-inverse {
+    border-color: #ccc;
+}
+
+#nav.navbar-inverse button {
+    border-color: rgba(0,0,0,.2);
+    color: white;
+}
+
+.user-0 {
+    background-color: #f2385a;
+}
+
+.user-1 {
+    background-color: #32b5de;
+}
+
+.user-2 {
+    background-color: #f5a503;
+}
+
+.user-3 {
+    background-color: #78db1d;
+}
+
+#nav.navbar-inverse .navbar-toggle {
+    padding: 6px 12px !important;
+}
+
+#nav .navbar-brand, .navbar-nav>li>a {
+    color: #efefef;
+}
+
+#nav .navbar-right {
+    float: right;
+    margin-right: 15px;
 }
 
 .navbar-brand {
@@ -36,7 +75,7 @@ nav.navbar {
 .timeline h4.title,
 #main-timeline h1 {
     text-align: center;
-    font-family: 'Homemade Apple', cursive;
+    font-family: Copse, sans-serif;
     text-shadow: 0 1px 2px rgba(0,0,0,.3);
 }
 
