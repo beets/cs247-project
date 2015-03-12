@@ -79,7 +79,14 @@ function existing_memory($id, $memory) {
         </ul>
     </div>
 </div>
-<a id="add-story" href="memory_create.php?<?= $get?>">
-    <span class="glyphicon glyphicon-plus bg-user-<?=$user_id?>"></span>
-</a>
+<div id="tl-footer">
+    <a id="add-story" href="memory_create.php?<?= $get?>">
+        <span class="glyphicon glyphicon-plus bg-user-<?=$user_id?>"></span>
+    </a>
+      <ul class="nav navbar-nav navbar-right">
+        <? for ($i = 0; $i < count($family_json['members']) && $i < 3; ++$i) { ?>
+        <li><a href="#"><span class="user-circ bg-user-<?=$i?>"></span> <?=$family_json['members'][$i]?></a></li>
+        <? } ?>
+      </ul>
+</div>
 <? include 'templates/footer.html' ?>
