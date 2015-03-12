@@ -10,6 +10,7 @@
             "title": "Need more coffee",
             "prompt": "What's your pick me up beverage?",
             "photo_url": "./data/test/relax.jpg",
+            "user": 2,
             "responses": [
                 {
                     "text": "I personally only take RedBull",
