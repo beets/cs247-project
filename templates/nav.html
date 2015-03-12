@@ -8,7 +8,10 @@
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li><a href="timeline.php?<?=$get?>"><?= $family_json['family'] ?></a></li>
+        <? for ($i = 0; $i < count($family_json['members']); ++$i) { ?>
+        <li><a href="#"><span class="user-circ bg-user-<?=$i?>"></span> <?=$family_json['members'][$i]?></a></li>
+        <? } ?>
+        <li class="divider"></li>
         <li><a href="index.php">Logout</a></li>
       </ul>
     </div>
