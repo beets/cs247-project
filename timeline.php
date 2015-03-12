@@ -1,19 +1,17 @@
 <? include('common.php');
 
 function new_story() {
-  global $get;
+  global $get, $user_id;
   ?>
   <li class="timeline-inverted timeline_new">
     <a class="show" href="memory_create.php?<?= $get ?>">
-    <div class="tl-circ"></div>
+    <div class="tl-circ bg-user-<?=$user_id?>"></div>
     <div class="timeline-panel">
-      <div class="tl-heading">
-        <h4>Start a new story</h4>
-      </div>
       <div class="tl-body">
-        <div class="images row">
-            <div class="col-xs-4"><div class="add_story">+</div></div>
-        </div>
+          <div class="add_story bg-user-<?=$user_id?>">
+            <span class="glyphicon glyphicon-plus"></span>
+            <span>Add a story</span>
+          </div>
       </div>
     </div>
     </a>
