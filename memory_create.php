@@ -27,7 +27,7 @@
     <div id=step-3 style="display:none">
         <div class="form-group">
             <label for="prompt"><h5>Ask your family to add to this memory</h5></label>
-            <textarea rows="5" name=prompt class="form-control" placeholder="Hey guys, remember this photo?"></textarea>
+            <textarea rows="5" name=prompt class="form-control" placeholder="What makes you smile when you this photo?"></textarea>
         </div>
         <button type="submit" class="btn btn-primary" id="send">Send</button>
     </div>
@@ -65,6 +65,9 @@ $(function() {
                     $('.main-photo').show();
                     $('form#create_story input[name=photo_url]').val(data.url);
                     $('#step-3').slideDown();
+                    setTimeout(function() {
+                        $("html, body").animate({ scrollTop: $(document).height() }, "easeInOutQuint");
+                    }, 0);
                 } else {
                     // Handle errors here
                     console.log('ERRORS: ' + data.error);

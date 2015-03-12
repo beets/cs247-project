@@ -1,6 +1,7 @@
 <?
 if ($_GET['reply']) {
     include('common.php');
+    $_GLOBALS['family_json'] = $family_json;
 }
 ?>
 <? include 'templates/header.html' ?>
