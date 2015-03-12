@@ -2,46 +2,32 @@
 
 <? include 'templates/header.html' ?>
 <? include 'templates/nav.html' ?>
+<form id="photo-upload" action="json_upload.php" method="post" enctype="multipart/form-data" style="display:none">
+    <input type="file" name="photo" accept="image/*" capture="">
+    <input type="submit" name="upload" value="Upload">
+</form>
 <div id="create" class="container-fluid">
     <h2>Add a story</h2>
-    <div id=step-1>
-        <div>
-            <div class="row" id="instructions">
-                <div class="col-xs-12">
-                    <h5>Step 1: Upload an photo</h5>
-                </div>
-            </div>
-            <div id="photo-form" class="row">
-                <div class="col-xs-12">
-                    <div class="upload-photo">
-                        <span class="glyphicon glyphicon-camera"></span>
-                        <span class="glyphicon glyphicon-refresh glyphicon-refresh-animate" style="display:none"></span>
-                    </div>
-                </div>
-            </div>
-            <form id="photo-upload" action="json_upload.php" method="post" enctype="multipart/form-data" style="display:none">
-                <div class="col-xs-6">
-                    <input type="file" name="photo" accept="image/*" capture="">
-                </div>
-                <div class="col-xs-6">
-                    <input type="submit" name="upload" value="Upload">
-                </div>
-            </form>
-            <div id="photo-uploaded" class="row" style="display:none">
-                <img class="img img-responsive col-xs-12" />
-            </div>
-        </div>
-    </div>
+    <h5>First, upload a photo</h5>
     <form id="create_story" action="memory_create_post.php?<?= $get ?>" method="post" onkeypress="return event.keyCode != 13;">
-    <div id=step-3 style="display:none">
-        <input name="photo_url" type="hidden" />
-        <div class="form-group">
-            <label for="title">Caption this photo</label>
-            <input type=text name=title class="form-control" />
+    <div id="photo-form">
+        <div class="upload-photo">
+            <span class="glyphicon glyphicon-camera"></span>
+            <span class="glyphicon glyphicon-refresh glyphicon-refresh-animate" style="display:none"></span>
         </div>
+        <div class="img-container main-photo" style="display:none">
+            <img class="img" src=""/>
+            <input type=text name=title class="form-control" placeholder="Caption this photo" />
+        </div>
+        <input name="photo_url" type="hidden" />
+    </div>
+    <div id="photo-uploaded" class="row" style="display:none">
+        <img class="img img-responsive col-xs-12" />
+    </div>
+    <div id=step-3 style="display:none">
         <div class="form-group">
-            <label for="prompt">Ask your family to add this memory</label>
-            <textarea name=prompt class="form-control">Hey guys, what do you think?</textarea>
+            <label for="prompt"><h5>Ask your family to add to this memory</h5></label>
+            <textarea rows="5" name=prompt class="form-control" placeholder="Hey guys, remember this photo?"></textarea>
         </div>
         <button type="submit" class="btn btn-primary" id="send">Send</button>
     </div>
@@ -74,11 +60,11 @@ $(function() {
             success: function(data, textStatus, jqXHR) {
                 if (data.url) {
                     // Success
-                    $('#photo-form .upload-photo').empty().css('background-image', 'url(' + data.url + ')');
-                    $('#instructions').css('visibility', 'hidden');
-                    $('#step-3').show();
-                    $('#step-3 textarea').focus();
+                    $('#photo-form .upload-photo').hide();
+                    $('.main-photo img').attr('src', data.url);
+                    $('.main-photo').show();
                     $('form#create_story input[name=photo_url]').val(data.url);
+                    $('#step-3').slideDown();
                 } else {
                     // Handle errors here
                     console.log('ERRORS: ' + data.error);

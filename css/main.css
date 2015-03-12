@@ -188,11 +188,12 @@ a#add-story .glyphicon {
 
 #photo-form .upload-photo {
     height: 320px;
-    border: 3px solid #90acc7;
-    background: #6a8db3;
+    border: 1px solid rgba(0,0,0,.2);
+    background: rgba(0,0,0,.5);
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
+    border-radius: 5px;
 }
 
 #photo-form .upload-photo .glyphicon {
@@ -205,8 +206,12 @@ a#add-story .glyphicon {
     cursor: pointer;
 }
 
-.instructions {
-    margin-top: 1em;
+#create .instructions {
+    margin-top: 15px;
+}
+
+#create #send {
+    margin-top: 15px;
 }
 
 #request textarea {
@@ -250,10 +255,24 @@ a#add-story .glyphicon {
     margin-bottom: 2em;
 }
 
+#request h5,
+#create h5,
 #memory h5 {
     font-family: Copse, sans-serif;
     font-size: 16px;
     margin-top: 35px;
+}
+
+#create input[name=title] {
+    font-family: Copse, sans-serif;
+    color: #33312c;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.1;
+    padding: 10px 0 15px;
+    text-align: center;
+    border: none;
+    height: 50px;
 }
 
 video {
