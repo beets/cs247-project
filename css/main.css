@@ -16,6 +16,11 @@ h2 {
     font-family: Copse, sans-serif;
 }
 
+.btn-primary {
+    background: #039be5 !important;
+    border: none !important;
+}
+
 #nav.navbar {
     font-family: 'Copse', sans-serif;
     background: #6a8492;
@@ -41,6 +46,9 @@ h2 {
 span.user-0 {
     color: #f2385a;
 }
+.bd-user-0 {
+    border-color: #f2385a;
+}
 
 .bg-user-1,
 #main-timeline .tl-circ.user-1,
@@ -49,6 +57,9 @@ span.user-0 {
 }
 span.user-1 {
     color: #32b5de;
+}
+.bd-user-1 {
+    border-color: #32b5de;
 }
 
 .bg-user-2,
@@ -59,6 +70,9 @@ span.user-1 {
 span.user-2 {
     color: #f5a503;
 }
+.bd-user-2 {
+    border-color: #f5a503;
+}
 
 .bg-user-3,
 #main-timeline .tl-circ.user-3,
@@ -67,6 +81,9 @@ span.user-2 {
 }
 span.user-3 {
     color: #78db1d;
+}
+.bd-user-3 {
+    border-color: #78db1d;
 }
 
 #nav.navbar-inverse .navbar-toggle {
@@ -92,12 +109,12 @@ span.user-3 {
 #main-timeline h1 {
     color: #333;
 }
-.timeline h4.title {
+h4.title {
     color: #33312c;
 }
 
 .form-signin h1,
-.timeline h4.title,
+h4.title,
 #main-timeline h1 {
     font-family: Copse, sans-serif;
 }
@@ -107,7 +124,7 @@ span.user-3 {
     text-shadow: 0 1px 2px rgba(0,0,0,.3);
 }
 
-.timeline h4.title {
+h4.title {
     text-align: center;
     margin: 15px auto;
 }
@@ -154,14 +171,12 @@ a#add-story .glyphicon {
     border-color: rgba(0,0,0,.2);
 }
 
-.main-photo.img {
-    box-shadow: 0 2px 12px rgba(0,0,0,.3);
-    border: none !important;
-    margin: 0 auto 2em;
+.main-photo.img-container {
     display: block;
+    border: 1px solid rgba(0,0,0,.25);
+    border-radius: 5px;
 }
 
-.main-photo,
 #photo-form .upload-photo {
     height: 320px;
     border: 3px solid #90acc7;
@@ -200,6 +215,34 @@ a#add-story .glyphicon {
 #request .grandpa-sm {
     border-radius: 50%;
     height: 30px;
+}
+
+#memory {
+    margin-top: 15px;
+}
+#memory .prompt {
+    margin: 15px auto;
+}
+
+#memory .buttons .btn {
+    border: none;
+    border-radius: 4px;
+}
+#memory .buttons #video {
+    background: #f44336;
+}
+#memory .buttons #text {
+    background: #e0e0e0;
+    margin-left: 15px;
+}
+
+#memory .response {
+    margin-bottom: 2em;
+}
+
+#memory .response h5 {
+    font-family: Copse, sans-serif;
+    font-size: 16px;
 }
 
 .glyphicon-refresh-animate {

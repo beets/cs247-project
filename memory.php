@@ -1,17 +1,16 @@
 <?
 include('common.php');
 $memory = $memories[$_GET['id']];
+$requester = $family_json['members'][$memory['user']];
 $edit_mode = $_GET['edit'];
 
 function display_response($response) {
     global $family_json;
 ?>
 <div class="response">
-    <h4><?= $family_json['members'][$response['member']] ?></h4>
+    <h5><?= $family_json['members'][$response['member']] ?> writes</h5>
     <? if ($response['text']) { ?>
-    <div>
-        <p><?= nl2br($response['text'])?></p>
-    </div>
+        <blockquote class="bd-user-<?=$response['member']?>"><?= nl2br($response['text'])?></blockquote>
     <? } else { ?>
         <video src="<?= $response['video_url']?>" controls></video>
     <? } ?>
@@ -21,25 +20,23 @@ function display_response($response) {
 <? include 'templates/header.html' ?>
 <? include 'templates/nav.html' ?>
 <div id="memory" class="container-fluid">
-    <div class="row">
-        <div class="col-xs-12">
-            <h1><?= $memory['title'] ?></h1>
-        </div>
+    <div class="img-container main-photo">
+        <img class="img" src="<?= $memory['photo_url']?>"/>
+        <h4 class="title"><?= $memory['title'] ?></h4>
     </div>
-    <div class="row">
-        <div class="col-xs-12">
-            <img class="main-photo img" src="<?= $memory['photo_url']?>"/>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-12">
-            <h2><?= $memory['prompt'] ?></h2>
-        </div>
+    <div class="prompt">
+        <h5><?= $requester?> asks:</h5>
+        <blockquote class="bd-user-<?=$memory['user']?>"><?= $memory['prompt'] ?></blockquote>
     </div>
     <? if ($edit_mode) { ?>
+        <h5>What's your memory of the moment?</h5>
         <div class="buttons">
-            <button class="btn btn-primary" id="video">Video</button>
-            <button class="btn btn-primary" id="text">Type</button>
+            <button class="btn btn-danger btn-lg" id="video">
+                <span class="glyphicon glyphicon-facetime-video"> <strong>Record</strong>
+            </button>
+            <button class="btn btn-default btn-lg" id="text">
+                <span class="glyphicon glyphicon-comment"> <strong>Write</strong>
+            </button>
         </div>
         <form id="photo-upload" action="json_upload.php" method="post" enctype="multipart/form-data" style="display:none">
             <input type="file" name="photo" accept="video/*" capture="">
@@ -48,7 +45,7 @@ function display_response($response) {
         <form action="memory_update.php?<?=$_SERVER['QUERY_STRING'] ?>" method="post" id="memory-update" style="display:none">
             <input type=hidden name="video_url" />
             <div class="form-group">
-                <textarea name=text class="form-control"></textarea>
+                <textarea name=text class="form-control" rows="10"></textarea>
             </div>
             <button class="btn btn-primary" type=submit>Add memory</button>
         </form>
@@ -66,10 +63,11 @@ $(function() {
         $('#photo-upload input[name=photo]').click();
         // XXX don't hide buttons / deal with error or back
         // XXX add reminder to point camera forward
-        $('.buttons').hide();
+        //$('.buttons').hide();
     });
     $('button#text').click(function() {
         $('.buttons').hide();
+        $('#memory-update').show();
     });
     $('form#photo-upload input[name=photo]').change(function() {
         $('form#photo-upload').submit();
