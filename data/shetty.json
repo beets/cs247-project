@@ -1,0 +1,62 @@
+{
+    "family": "Shetty",
+    "members": [
+        "Karthik",
+        "Priya",
+        "Vishal"
+    ],
+    "memories": [
+        {
+            "title": "Aanya at 10 months",
+            "prompt": "Hi Mom, found this picture at home. Where was this? How old is Anya her? Whats going on here? :)",
+            "photo_url": ".\/data\/shetty\/aanya.jpg",
+            "user": 2,
+            "responses": [
+                {
+                    "member": 1,
+                    "video_url": ".\/data\/shetty\/aanya_resp.mp4"
+                }
+            ]
+        },
+        {
+            "title": "Getting the hang of it",
+            "prompt": "Pa, can you tell me a little bit about this photograph please?",
+            "photo_url": ".\/data\/shetty\/vishal.jpg",
+            "user": 2,
+            "responses": [
+                {
+                    "member": 0,
+                    "video_url": ".\/data\/shetty\/vishal_resp.mp4"
+                },
+                {
+                    "text": "I remember that stroller! Your aunt Aneesha bought it to for u. We couldn't keep you in one place for more than 10 mins :D",
+                    "member": 1
+                }
+            ]
+        },
+        {
+            "title": "Getting the hang of it",
+            "prompt": "Remember this? :)",
+            "photo_url": ".\/data\/shetty\/home.jpg",
+            "user": 1,
+            "responses": [
+                {
+                    "text": "Woah! Where did you find this? I still think of that house sometimes, surrounded by forest on three sides. We used to set up table in the garden for breakfast every Saturday, you used to make jalebis for everyone. All the houses we have lived in, this one was my favourite. So happy this picture has survived",
+                    "member": 0
+                }
+            ]
+        },
+        {
+            "title": "Escape through Table Tennis",
+            "prompt": "I didn't know you played table tennis!",
+            "photo_url": ".\/data\/shetty\/tt.jpg",
+            "user": 1,
+            "responses": [
+                {
+                    "text": "This was during IIM... I really wanted to go the US, had got admission for MS but there wasn't enough money to pay the tuition. I was really frustrated, my friends had not worked as hard as me, but were now studying in US because they could afford it. I felt that my life would never recover from this. I began playing table tennis for at least two hours everyday. All my frustration came out on the bat, broke many. Now it feels stupid to think that I was so convinced I would never get chance to go out of India just because of that one incident. Should have spent less time on table tennis and more in class.",
+                    "member": 0
+                }
+            ]
+        }
+    ]
+}
