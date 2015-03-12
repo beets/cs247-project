@@ -1,7 +1,23 @@
 #main-timeline .tl-body img {
-    max-height: 180px;
+    width: 100%;
     display: block;
     margin: auto;
+}
+
+.img-container {
+    position: relative;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ccc #d7d7d7 #d7d7d7 #ccc;
+}
+
+.request-status {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,.5);
+    padding: 4px 8px 0 5px;
+    border-radius: 0 5px 0 0;
 }
 
 .timeline .request-status .glyphicon {
@@ -57,7 +73,6 @@
   padding: 3px 0;
   font-weight: bold;
   text-align: center;
-  -webkit-box-shadow: 0 0 11px rgba(0,0,0,0.35);
 }
 
 .timeline li {
@@ -83,20 +98,16 @@
   float: left;
   background: #fff;
   border: 1px solid #d4d4d4;
-  padding: 20px;
+  padding: 15px;
   position: relative;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  border-radius: 8px;
-  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 /** panel arrows **/
 .timeline li .timeline-panel:before {
   position: absolute;
-  top: 26px;
+  top: calc(50% - 15px);
   right: -15px;
   display: inline-block;
   border-top: 15px solid transparent;
@@ -108,7 +119,7 @@
 
 .timeline li .timeline-panel:after {
   position: absolute;
-  top: 27px;
+  top: calc(50% - 14px);
   right: -14px;
   display: inline-block;
   border-top: 14px solid transparent;
@@ -155,7 +166,7 @@
   height: 35px;
   line-height: 35px;
   margin-left: -16px;
-  border: 3px solid rgba(255,255,255,.5);
+  border: 3px solid rgba(0,0,0,.2);
   border-top-right-radius: 50%;
   border-top-left-radius: 50%;
   border-bottom-right-radius: 50%;
@@ -206,11 +217,11 @@
   }
 
   ul.timeline li .tl-circ {
-    top: 22px;
+    top: calc(50% - 18px);
     left: 22px;
     margin-left: 0;
-
   }
+
   ul.timeline > li > .tldate {
     margin: 0;
   }

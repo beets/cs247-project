@@ -4,7 +4,7 @@ function new_story() {
   global $get;
   ?>
   <li class="timeline-inverted timeline_new">
-    <a href="memory_create.php?<?= $get ?>">
+    <a class="show" href="memory_create.php?<?= $get ?>">
     <div class="tl-circ"></div>
     <div class="timeline-panel">
       <div class="tl-heading">
@@ -45,20 +45,20 @@ function existing_memory($id, $memory) {
   }
   ?>
   <li class="existing-memory timeline-inverted <?=$class?>">
-    <a href="<?= $url ?>">
+    <a class="show" href="<?= $url ?>">
         <div class="tl-circ user-<?=$memory['user']?>">
         </div>
         <div class="timeline-panel">
             <div class="tl-body">
-              <div class="images row">
-                  <img src="<?= $memory['photo_url'] ?>" class="img img-responsive center"/>
+              <div class="img-container">
+                  <img src="<?= $memory['photo_url'] ?>" class="img center"/>
+                  <div class="request-status">
+                    <? for ($i = 0; $i < count($responses); ++$i) { $response = $responses[$i]; ?>
+                    <span class="glyphicon glyphicon-<?= isset($response['video_url']) ? 'facetime-video' : 'comment'?> user-<?=$response['member']?>"></span>
+                    <? } ?>
+                  </div>
               </div>
               <h4 class="title"><?= $memory['title'] ?></h4>
-              <div class="request-status">
-                <? for ($i = 0; $i < count($responses); ++$i) { $response = $responses[$i]; ?>
-                <span class="glyphicon glyphicon-<?= isset($response['video_url']) ? 'facetime-video' : 'comment'?> user-<?=$response['member']?>"></span>
-                <? } ?>
-            </div>
         </div>
     </a>
   </li>
@@ -82,6 +82,6 @@ function existing_memory($id, $memory) {
     </div>
 </div>
 <a id="add-story" href="memory_create.php?<?= $get?>">
-    <span class="glyphicon glyphicon-plus"></span>
+    <span class="glyphicon glyphicon-plus bg-user-<?=$user_id?>"></span>
 </a>
 <? include 'templates/footer.html' ?>
