@@ -8,13 +8,14 @@ function display_response($response) {
     global $family_json;
 ?>
 <div class="response">
+    <h5><?= $family_json['members'][$response['member']] ?> <?= isset($response['text']) ? 'writes' : 'says'?>:</h5>
+    <blockquote class="bd-user-<?=$response['member']?>">
     <? if ($response['text']) { ?>
-        <h5><?= $family_json['members'][$response['member']] ?> writes:</h5>
-        <blockquote class="bd-user-<?=$response['member']?>"><?= nl2br($response['text'])?></blockquote>
+        <?= nl2br($response['text'])?>
     <? } else { ?>
-        <h5><?= $family_json['members'][$response['member']] ?> says:</h5>
         <video src="<?= $response['video_url']?>" controls></video>
     <? } ?>
+    </blockquote>
 </div>
 <? } ?>
 
@@ -57,14 +58,15 @@ function display_response($response) {
         <? } ?>
     <? } ?>
 </div>
+<div class="glass" style="display:none">
+    <span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span>
+</div>
 <? include 'templates/footer.html' ?>
 <script>
 $(function() {
     $('button#video').click(function() {
+        alert('Don\'t forget to turn the camera to face you!');
         $('#photo-upload input[name=photo]').click();
-        // XXX don't hide buttons / deal with error or back
-        // XXX add reminder to point camera forward
-        //$('.buttons').hide();
     });
     $('button#text').click(function() {
         $('.buttons').hide();
@@ -75,6 +77,7 @@ $(function() {
     });
     $('form#photo-upload input[name=photo]').change(function() {
         $('form#photo-upload').submit();
+        $('.glass').show();
         // XXX show some spinner (or just do a non-ajax submit
     });
     $('form#photo-upload').submit(function(event) {
@@ -99,13 +102,16 @@ $(function() {
                     // Handle errors here
                     console.log('ERRORS: ' + data.error);
                 }
+                $('.glass').hide();
             },
             error: function(jqXHR, textStatus, errorThrown) {
                 // Handle errors here
                 console.log('ERRORS: ' + textStatus);
+                $('.glass').hide();
             },
             complete: function() {
                 // STOP LOADING SPINNER
+                $('.glass').hide();
             }
         });
         return false;

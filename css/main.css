@@ -253,7 +253,27 @@ a#add-story .glyphicon {
 #memory h5 {
     font-family: Copse, sans-serif;
     font-size: 16px;
-    margin-top: 25px;
+    margin-top: 35px;
+}
+
+video {
+    width: 100%;
+}
+
+.glass {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .75);
+}
+.glass .glyphicon {
+    color: white;
+    font-size: 2em;
+    top: 50%;
+    left: 50%;
+    position: absolute;
 }
 
 .glyphicon-refresh-animate {
