@@ -68,6 +68,9 @@ $(function() {
     $('button#text').click(function() {
         $('.buttons').hide();
         $('#memory-update').show();
+        setTimeout(function() {
+            $("html, body").animate({ scrollTop: $(document).height() }, "easeInOutQuint");
+        }, 0);
     });
     $('form#photo-upload input[name=photo]').change(function() {
         $('form#photo-upload').submit();

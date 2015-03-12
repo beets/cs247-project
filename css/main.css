@@ -227,6 +227,7 @@ a#add-story .glyphicon {
 #memory .buttons .btn {
     border: none;
     border-radius: 4px;
+    margin: 10px auto 15px;
 }
 #memory .buttons #video {
     background: #f44336;
@@ -240,9 +241,10 @@ a#add-story .glyphicon {
     margin-bottom: 2em;
 }
 
-#memory .response h5 {
+#memory h5 {
     font-family: Copse, sans-serif;
     font-size: 16px;
+    margin-top: 25px;
 }
 
 .glyphicon-refresh-animate {
