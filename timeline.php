@@ -46,7 +46,7 @@ function existing_memory($id, $memory) {
   ?>
   <li class="existing-memory timeline-inverted <?=$class?>">
     <a class="show" href="<?= $url ?>">
-        <div class="tl-circ user-<?=$memory['user']?>">
+        <div class="tl-circ bg-user-<?=$memory['user']?>">
         </div>
         <div class="timeline-panel">
             <div class="tl-body">

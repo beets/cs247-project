@@ -38,10 +38,8 @@ h2 {
     color: white;
 }
 
-.bg-user-0,
-#main-timeline .tl-circ.user-0,
-.btn.user-0 {
-    background-color: #f2385a;
+.bg-user-0 {
+    background-color: #f2385a !important;
 }
 span.user-0 {
     color: #f2385a;
@@ -50,10 +48,8 @@ span.user-0 {
     border-color: #f2385a;
 }
 
-.bg-user-1,
-#main-timeline .tl-circ.user-1,
-.btn.user-1 {
-    background-color: #32b5de;
+.bg-user-1 {
+    background-color: #32b5de !important;
 }
 span.user-1 {
     color: #32b5de;
@@ -62,10 +58,8 @@ span.user-1 {
     border-color: #32b5de;
 }
 
-.bg-user-2,
-#main-timeline .tl-circ.user-2,
-.btn.user-2 {
-    background-color: #f5a503;
+.bg-user-2 {
+    background-color: #f5a503 !important;
 }
 span.user-2 {
     color: #f5a503;
@@ -74,10 +68,8 @@ span.user-2 {
     border-color: #f5a503;
 }
 
-.bg-user-3,
-#main-timeline .tl-circ.user-3,
-.btn.user-3 {
-    background-color: #78db1d;
+.bg-user-3 {
+    background-color: #78db1d !important;
 }
 span.user-3 {
     color: #78db1d;
