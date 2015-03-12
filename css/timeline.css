@@ -4,6 +4,10 @@
     margin: auto;
 }
 
+.timeline .request-status .glyphicon {
+    margin-right: 5px;
+}
+
 .timeline_new .add_story {
   display: block;
   color: white;
@@ -151,7 +155,7 @@
   height: 35px;
   line-height: 35px;
   margin-left: -16px;
-  border: 3px solid #90acc7;
+  border: 3px solid rgba(255,255,255,.5);
   border-top-right-radius: 50%;
   border-top-left-radius: 50%;
   border-bottom-right-radius: 50%;

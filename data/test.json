@@ -30,6 +30,7 @@
             "title": "Need more coffee",
             "prompt": "What's your pick me up beverage?",
             "photo_url": "./data/test/macaroons.jpg",
+            "user": 1,
             "responses": [
                 {
                     "text": "You guys are wimps, only triple espressos all the way",

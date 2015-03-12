@@ -32,28 +32,46 @@ h2 {
     color: white;
 }
 
-.user-0 {
+#main-timeline .tl-circ.user-0,
+.btn.user-0 {
     background-color: #f2385a;
 }
+span.user-0 {
+    color: #f2385a;
+}
 
-.user-1 {
+#main-timeline .tl-circ.user-1,
+.btn.user-1 {
     background-color: #32b5de;
 }
-
-.user-2 {
-    background-color: #f5a503;
+span.user-1 {
+    color: #32b5de;
 }
 
-.user-3 {
+#main-timeline .tl-circ.user-2,
+.btn.user-2 {
+    background-color: #f5a503;
+}
+span.user-2 {
+    color: #f5a503;
+}
+
+#main-timeline .tl-circ.user-3,
+.btn.user-3 {
     background-color: #78db1d;
+}
+span.user-3 {
+    color: #78db1d;
 }
 
 #nav.navbar-inverse .navbar-toggle {
     padding: 6px 12px !important;
 }
 
-#nav .navbar-brand, .navbar-nav>li>a {
+#nav .navbar-brand,
+#nav .navbar-nav>li>a {
     color: #efefef;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.7);
 }
 
 #nav .navbar-right {
@@ -67,16 +85,18 @@ h2 {
 }
 
 #main-timeline h1 {
-    margin: 1em auto;
     color: #33312c;
 }
 
 .form-signin h1,
 .timeline h4.title,
 #main-timeline h1 {
-    text-align: center;
     font-family: Copse, sans-serif;
     text-shadow: 0 1px 2px rgba(0,0,0,.3);
+}
+
+.timeline h4.title {
+    text-align: center;
 }
 
 #main-timeline .grandpa-main {
@@ -174,17 +194,17 @@ a#add-story .glyphicon {
     -webkit-animation: spinw 2s infinite linear;
     -moz-animation: spinm 2s infinite linear;
 }
- 
+
 @keyframes spin {
     from { transform: scale(1) rotate(0deg);}
     to { transform: scale(1) rotate(360deg);}
 }
-  
+
 @-webkit-keyframes spinw {
     from { -webkit-transform: rotate(0deg);}
     to { -webkit-transform: rotate(360deg);}
 }
- 
+
 @-moz-keyframes spinm {
     from { -moz-transform: rotate(0deg);}
     to { -moz-transform: rotate(360deg);}

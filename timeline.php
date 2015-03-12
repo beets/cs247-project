@@ -46,12 +46,7 @@ function existing_memory($id, $memory) {
   ?>
   <li class="existing-memory timeline-inverted <?=$class?>">
     <a href="<?= $url ?>">
-        <div class="tl-circ">
-            <? if (!$completed) { ?>
-            <span class="glyphicon glyphicon-pencil"></span>
-            <? } else { ?>
-            <span class="glyphicon glyphicon-ok"></span>
-            <? } ?>
+        <div class="tl-circ user-<?=$memory['user']?>">
         </div>
         <div class="timeline-panel">
             <div class="tl-body">
@@ -59,9 +54,10 @@ function existing_memory($id, $memory) {
                   <img src="<?= $memory['photo_url'] ?>" class="img img-responsive center"/>
               </div>
               <h4 class="title"><?= $memory['title'] ?></h4>
-              <div class="text-right">
-                <span class="glyphicon glyphicon-facetime-video"></span> <?= $video_count ?>&nbsp;&nbsp; 
-                <span class="glyphicon glyphicon-envelope"></span> <?= $text_count ?></p>
+              <div class="request-status">
+                <? for ($i = 0; $i < count($responses); ++$i) { $response = $responses[$i]; ?>
+                <span class="glyphicon glyphicon-<?= isset($response['video_url']) ? 'facetime-video' : 'comment'?> user-<?=$response['member']?>"></span>
+                <? } ?>
             </div>
         </div>
     </a>
@@ -89,8 +85,3 @@ function existing_memory($id, $memory) {
     <span class="glyphicon glyphicon-plus"></span>
 </a>
 <? include 'templates/footer.html' ?>
-<script>
-$(function() {
-    
-});
-</script>
