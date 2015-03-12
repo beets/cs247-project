@@ -38,7 +38,7 @@ function existing_memory($id, $memory) {
   }
   $url = 'memory.php?' . $get . '&id=' . $id;
   $class = '';
-  if ($completed) {
+  if ($completed || $memory['user'] == $user_id) {
       $class .= 'memory-completed';
   } else {
       $url .= '&edit=1';

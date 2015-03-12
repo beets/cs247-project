@@ -8,10 +8,11 @@ function display_response($response) {
     global $family_json;
 ?>
 <div class="response">
-    <h5><?= $family_json['members'][$response['member']] ?> writes</h5>
     <? if ($response['text']) { ?>
+        <h5><?= $family_json['members'][$response['member']] ?> writes:</h5>
         <blockquote class="bd-user-<?=$response['member']?>"><?= nl2br($response['text'])?></blockquote>
     <? } else { ?>
+        <h5><?= $family_json['members'][$response['member']] ?> says:</h5>
         <video src="<?= $response['video_url']?>" controls></video>
     <? } ?>
 </div>

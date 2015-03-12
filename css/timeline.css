@@ -51,7 +51,7 @@
 }
 
 .timeline:before {
-  top: 0;
+  top: 10px;
   bottom: 0;
   position: absolute;
   content: " ";
