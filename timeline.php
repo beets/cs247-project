@@ -29,7 +29,7 @@ function existing_memory($id, $memory) {
   for ($i = 0; $i < count($responses); ++$i) {
     if ($responses[$i]['member'] == $user_id) {
       $completed = true;
-      if ($responses[$i]['video_url']) {
+      if (isset($responses[$i]['video_url'])) {
         $video_count++;
       } else {
         $text_count++;
