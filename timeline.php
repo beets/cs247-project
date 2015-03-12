@@ -1,14 +1,14 @@
 <? include('common.php');
 
 function new_story() {
-  global $get, $user_id;
+  global $get, $user_css;
   ?>
   <li class="timeline-inverted timeline_new">
     <a class="show" href="memory_create.php?<?= $get ?>">
-    <div class="tl-circ bg-user-<?=$user_id?>"></div>
+    <div class="tl-circ bg-user-<?=$user_css?>"></div>
     <div class="timeline-panel">
       <div class="tl-body">
-          <div class="add_story bg-user-<?=$user_id?>">
+          <div class="add_story bg-user-<?=$user_css?>">
             <span class="glyphicon glyphicon-plus"></span>
             <span>Add a story</span>
           </div>
@@ -81,7 +81,7 @@ function existing_memory($id, $memory) {
 </div>
 <div id="tl-footer">
     <a id="add-story" href="memory_create.php?<?= $get?>">
-        <span class="glyphicon glyphicon-plus bg-user-<?=$user_id?>"></span>
+        <span class="glyphicon glyphicon-plus bg-user-<?=$user_css?>"></span>
     </a>
       <ul class="nav navbar-nav navbar-right">
         <? for ($i = 0; $i < count($family_json['members']) && $i < 3; ++$i) { ?>

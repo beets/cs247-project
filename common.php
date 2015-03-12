@@ -1,6 +1,7 @@
 <?
 $family_id = $_GET['family'];
 $user_id = $_GET['user'];
+$user_css = $user_id % 4;
 
 $family_file_path = './data/' . $family_id . '.json';
 $family_file = file_get_contents($family_file_path);

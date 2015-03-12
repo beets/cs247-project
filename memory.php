@@ -9,7 +9,7 @@ function display_response($response) {
 ?>
 <div class="response">
     <h5><?= $family_json['members'][$response['member']] ?> <?= isset($response['text']) ? 'writes' : 'says'?>:</h5>
-    <blockquote class="bd-user-<?=$response['member']?>">
+    <blockquote class="bd-user-<?=$response['member']%4?>">
     <? if ($response['text']) { ?>
         <?= nl2br($response['text'])?>
     <? } else { ?>
@@ -28,7 +28,7 @@ function display_response($response) {
     </div>
     <div class="prompt">
         <h5><?= $requester?> asks:</h5>
-        <blockquote class="bd-user-<?=$memory['user']?>"><?= $memory['prompt'] ?></blockquote>
+        <blockquote class="bd-user-<?=$memory['user']%4?>"><?= $memory['prompt'] ?></blockquote>
     </div>
     <? if ($edit_mode) { ?>
         <h5>What's your memory of the moment?</h5>
